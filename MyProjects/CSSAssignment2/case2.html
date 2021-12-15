@@ -9,32 +9,65 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <style>
     main{
-      height: 500px;
       border: 1px solid red;
       position: relative;
     }
-    main>nav{
+    main>aside{
+      background-color: darkviolet;
+      width: 10vw;
       position: absolute;
-      width: 100px;
-      background: red;
       top: 0;
       bottom: 0;
     }
-    main>section{
-      position: absolute;
+
+    main>aside>nav>ul{
+      padding: 20px;
+      list-style: none;
     }
+    main>aside>nav>ul>li{
+      padding:5px 0px 10px 0px;
+    }
+    main>aside>nav>ul>li:hover{
+      cursor: pointer;
+      color: red;
+    }
+    body>main>aside>nav{
+      position: relative;
+      left: 0;
+      font-size: 20px;
+      width: 100px;
+      font-family: 'Bebas Neue', cursive;
+      color: #d1efe8;
+    }
+
+    main>section{
+      position: relative;
+      margin-left: 11vw;
+      margin-right: 10px;
+
+    }
+    main>section>section{
+      margin: auto;
+      position: relative;
+
+    }
+    main>section>section>img{
+      margin: 10px 20px 10px 20px;
+      width: 400px;
+      height: 210px;
+      position: relative;
+    }
+
     header{
       position: relative;
       height: 80px;
       box-shadow: 0px 2px 15px -5px #77a2e3;
     }
-
     header>img{
       margin: 20px;
       position: relative;
       width: 200px;
     }
-
     header>ul{
       position: absolute;
       right: 30px;
@@ -56,6 +89,23 @@
       color: red;
     }
 
+    footer{
+      background-color: thistle;
+      height: 30px;
+      text-align: center;
+      padding-top: 10px;
+    }
+    footer>p{
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 0px;
+      position: relative;
+      margin: auto;
+      font-size: 20px;
+      font-family: fantasy;
+      color: #0c0323;
+    }
   </style>
 </head>
 <body>
@@ -72,20 +122,22 @@
 </header>
 
 <main>
+  <aside>
     <nav>
       <ul>
         <li>Home</li>
-        <li>Service</li>
-        <li>Contacts</li>
-        <li>About Us</li>
+        <li>About</li>
+        <li>Gallery</li>
+        <li>Contact Us</li>
       </ul>
     </nav>
-
+  </aside>
   <section>
     <section>
-      <div></div>
-      <div></div>
-      <div></div>
+      <img src="assets/img/img1.jpg" />
+      <img src="assets/img/img2.jpg" />
+      <img src="assets/img/img3.jpg" />
+
     </section>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci cumque debitis dignissimos dolorem
       dolores esse et in magni minus molestiae necessitatibus recusandae, sapiente tempora ullam! Cumque
@@ -111,6 +163,9 @@
     <p>Accusantium aut, consequuntur illo molestiae nemo neque perspiciatis, quos sed, sunt tempora tempore
       voluptas. Accusantium ea earum facilis harum laborum repellat voluptates. Eos harum incidunt modi pariatur
       veritatis vitae voluptas.</p>
+
+
+
 
   </section>
 </main>
