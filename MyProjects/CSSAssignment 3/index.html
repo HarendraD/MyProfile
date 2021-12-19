@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 3</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <style>
+        section{
+            height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+
+        }
+        section>section{
+            position: fixed;
+            border: 40px solid #75a15a;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+        section>section>section{
+            position: fixed;
+            border: 40px solid red;
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+        }
+        section:nth-child(1)>div{
+            position: relative;
+            background: mediumpurple;
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            z-index: -50;
+            font-weight: bolder;
+            color: white;
+        }
+        section:nth-child(2)>div{
+            position: relative;
+            background: #1e4fff;
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            z-index: -50;
+            font-weight: bolder;
+            color: white;
+        }
+        section:nth-child(3)>div{
+            position: relative;
+            background: #c97f00;
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            z-index: -50;
+            font-weight: bolder;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div> Hello</div>
+    <section>
+        <section>
+        </section>
+    </section>
+</section>
+<section>
+    <div> Welcome To</div>
+</section>
+<section>
+    <div> Institute <br> of <br>
+    Software <br>
+        Engineering
+    </div>
+</section>
+</body>
+</html>
