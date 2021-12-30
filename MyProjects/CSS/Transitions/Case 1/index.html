@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 1</title>
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="assets/css/fonts/css/all.css" rel="stylesheet">
+    <style>
+
+      section {
+        width: 228px;
+        height: 355px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        right: 167px;
+      }
+
+      section > div {
+        left: 0;
+        height: 40px;
+        position: relative;
+        background: #1d33ab;
+        color: white;
+        box-shadow: 1px 2px 3px 2px #3a483b;
+        transition: all 2s;
+      }
+
+      section > div > h3 {
+        margin: 0 20px 0 60px;
+        display: inline-block;
+        padding: 10px;
+      }
+
+      section > div > i {
+        color: yellow;
+        position: absolute;
+        right: 10px;
+        top: 7px;
+        font-size: 28px;
+      }
+
+      section > div:hover {
+        background: #740505;
+        left: 160px;
+        cursor: pointer;
+        transition: all 2s;
+      }
+
+    </style>
+
+</head>
+<body>
+    <section>
+        <div>
+            <h3>Home</h3>
+            <i class="fas fa-home"></i>
+        </div>
+        <div>
+            <h3>Gallery</h3>
+            <i class="far fa-images"></i>
+        </div>
+        <div>
+            <h3>About Us</h3>
+            <i class="fas fa-address-card"></i>
+        </div>
+        <div>
+             <h3>Service</h3>
+             <i class="fas fa fa-cogs"></i>
+        </div>
+        <div>
+            <h3>Contact Us</h3>
+            <i class="fas fa-comments"></i>
+        </div>
+    </section>
+</body>
+</html>
