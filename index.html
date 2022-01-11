@@ -28,11 +28,22 @@
             color: #011638;
 
         }
+        header>ul>li>a{
+            text-decoration: none;
+            color: black;
+        }
         header>ul>li{
             padding: 0 15px 0 15px;
             display: inline-block;
         }
-        header>ul>li:hover{
+        header>ul>li>a:hover{
+            cursor: pointer;
+            color: red;
+            text-decoration-line: underline;
+            transform: scale(1.2);
+
+        }
+        header>ul>li>:hover{
             cursor: pointer;
             color: red;
             text-decoration-line: underline;
@@ -878,22 +889,22 @@
         <h1>H<span>D</span> </h1>
     </div>
     <ul>
-        <li>About Me</li>
-        <li>My Life Journey</li>
-        <li>Projects</li>
-        <li>Skills</li>
-        <li>Gallery</li>
-        <li>Contact Me</li>
+        <li><a href="#section2">About Me</a></li>
+        <li><a href="#section3">My Life Journey</a></li>
+        <li><a href="#section4">Projects</a></li>
+        <li><a href="#section5">Skills</a></li>
+        <li><a href="#section6">Gallery</a></li>
+        <li><a href="#section7">Contact Me</a></li>
     </ul>
 </header>
 
-    <section class="Home">
+    <section class="Home" id="section1">
         <div class="main-image">
             <img src="assets/images/ProfilePic.png">
         </div>
         <div class="main-text">
             <h2 class="hello">HELLO !</h2>
-            <h1 class="name">HARENDRA <span>DILSHAN</span></h1>
+            <h1 class="name"> <span>I'M </span>HARENDRA <span>DILSHAN</span></h1>
             <h3 class="info-text">This is my official Portfolio to showcase my all works</h3>
         </div>
         <div class="Icon">
@@ -906,7 +917,7 @@
 
     </section>
 
-    <section class="about-me">
+    <section class="about-me" id="section2">
         <div class="caption-text">About Me</div>
         <div class="texts">
             <div class="about-text">
@@ -933,7 +944,7 @@
         </div>
     </section>
 
-    <section class="journey">
+    <section class="journey" id="section3">
         <div class="caption-text">My Life Journey</div>
         <div class="center-image">
             <div class="arrow">
@@ -977,7 +988,7 @@
     </div>
     </section>
 
-    <section class="projects">
+    <section class="projects" id="section4">
         <div class="caption-text">Projects</div>
     <!--- images--->
         <div class="all">
@@ -1029,7 +1040,7 @@
 
     </section>
 
-    <section class="skills">
+    <section class="skills" id="section5">
         <div class="caption-text">My Skills</div>
         <div class="Skills">
             <div>
@@ -1056,7 +1067,7 @@
         </div>
     </section>
 
-    <section class="Gallery">
+    <section class="Gallery" id="section6">
         <div class="caption-text">Gallery</div>
         <div class="slide">
             <div class="Slider">
@@ -1069,7 +1080,7 @@
 
     </section>
 
-    <section class="contact-me">
+    <section class="contact-me" id="section7">
         <div class="caption-text">Contact Me</div>
         <div class="center">
             <div class="contact-text">
