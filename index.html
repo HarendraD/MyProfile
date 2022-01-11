@@ -153,17 +153,6 @@
         }
 
 /*----About me---------------------------------------------------*/
-        .About-Me{
-            position: absolute;
-            left: 0;
-            top: 10px;
-            right: 0;
-            margin: auto;
-            width: max-content;
-            font-size: 40px;
-            font-family: monospace;
-            text-decoration-line: underline;
-        }
 
         .texts{
             position: relative;
@@ -244,7 +233,7 @@
             left: 45%;
         }
 /*----journey---------------------------------------------------*/
-        .Journey-text{
+        .caption-text{
             position: absolute;
             left: 0;
             top: 10px;
@@ -431,11 +420,330 @@
         }
 
 /*----Projects---------------------------------------------------*/
+        .all{
+            top: 40px;
+            position: relative;
+            width: 90%;
+            margin: 0 auto;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .all .image-area{
+            position: relative;
+            border: 5px solid black;
+            border-radius: 4px;
+            transition: all 0.5s ease-in-out;
+        }
+        .all .image-area:hover{
+            border-color: red;
+            transition: all 0.5s ease-in-out;
+            box-shadow: 2px 2px 20px 2px #ff6262;
+
+        }
+        .all .image-area>img{
+            width: 100%;
+        }
+        .all .image-area .hover{
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            background-color: rgba(17, 56, 20, 0.34);
+            height: 100%;
+            text-align: center;
+            width: 100%;
+            font-size: 30px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease-in-out;
+        }
+        .all .image-area:hover .hover{
+            cursor: pointer;
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.5s ease-in-out;
+        }
+        .all .image-area:hover .hover .center a{
+            cursor: pointer;
+            bottom: 0;
+            transition: all 0.5s ease-in-out;
+
+        }
+        .all .image-area .hover .center{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+        }
+        .all .image-area .hover .center>div{
+            margin-bottom: 20px;
+            color: white;
+            font-weight: bold;
+        }
+        .all .image-area .hover .center>div>a{
+            text-decoration: none;
+            padding: 10px 20px;
+            color: white;
+            background: #00ec00;
+            border-radius: 20px;
+            position: relative;
+            bottom: -100px;
+            transition: all 0.5s ease-in-out;
+
+        }
+
+        .Button{
+            padding: 10px 10px 0 15px;
+            position: absolute;
+            left: 0;
+            top: 75%;
+            right: 0;
+            margin: auto;
+            font-size: 40px;
+            color: #000000;
+            font-weight: bold;
+            font-family: 'Bebas Neue', cursive;
+            width: 250px;
+            height: 50px;
+            border-radius: 30px;
+            background: #000d1e;
+            text-align: left;
+
+        }
+        .Button a{
+            text-decoration: none;
+            color: white;
+
+        }
+        .Button .arrow-right{
+            position: relative;
+            top: 20%;
+            bottom: 0;
+            left: 20%;
+            margin: auto;
+            width: max-content;
+            height: max-content;
+            transform: rotate(270deg);
+        }
+        .Button .arrow-right>span{
+            position: relative;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 75px;
+            margin: auto;
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-bottom: 5px solid #cdfff0;
+            border-right: 5px solid #cdfff0;
+            transform: rotate(45deg);
+
+            animation: right 2s infinite;
+        }
+        .Button .arrow-right>span:nth-child(2){
+            animation-delay:-.2s;
+        }
+        .Button .arrow-right>span:nth-child(3){
+            animation-delay:-.4s;
+        }
+        .Button .arrow-right>span:nth-child(4){
+            animation-delay:-.6s;
+        }
+        @keyframes right {
+            0%{
+                opacity: 1;
+                transform: rotate(45deg) translate(-20px,-20px);
+            }
+            50%{
+                opacity: 1;
+
+            }
+            100%{
+                opacity: 0;
+                transform: rotate(45deg) translate(20px,20px);
+            }
+        }
+/*----Skills---------------------------------------------------*/
+        .Skills{
+            position: relative;
+            top: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 30%;
+
+        }
+        .Skills>div{
+            position: relative;
+            height: 95%;
+            width: 90%;
+            margin: 50px;
+            border-radius: 50%;
+            box-shadow: 16px 16px 30px -8px #bafafa;
+            overflow: hidden;
+
+        }
+        .Skills>div::before{
+            content: "";
+            background-image: conic-gradient(#00c0d3
+            219deg, #19edd05e
+            216deg);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes rotate {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+
+        }
 
 
+        .Skills>div>img{
+            width: 98%;
+            height: 98%;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 10;
+        }
+        .caption-text-two{
+            position: absolute;
+            left: 0;
+            top: 45%;
+            right: 0;
+            margin: auto;
+            width: max-content;
+            font-size: 30px;
+            font-family: monospace;
+            text-decoration-line: underline;
+        }
+        .Tools{
+            position: relative;
+            top: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 30%;
+
+        }
+        .Tools>div{
+            position: relative;
+            height: 95%;
+            width: 90%;
+            margin: 50px;
+            border-radius: 20%;
+            box-shadow: 16px 16px 30px -8px #bafafa;
+            overflow: hidden;
+        }
+        .Tools>div::before{
+            content: "";
+            background-image: conic-gradient(#00c0d3
+            219deg, #19edd05e
+            216deg);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes rotate {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+
+        }
+        .Tools>div>img{
+            width: 98%;
+            height: 98%;
+            border-radius: 20%;
+            position: absolute;
+            z-index: 10;
+            background-color: white;
+        }
+        .Tools>div:hover{
+            transform: scale(1.2);
+        }
+        .Skills>div:hover{
+            transform: scale(1.2);
+        }
+
+/*----Gallery---------------------------------------------------*/
+        .slide{
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 20%;
+            bottom: 100px;
+            margin: auto;
+            overflow: hidden;
+            border: 5px solid #00fff3;
+        }
+        .slide .Slider{
+            width: 400%;
+            height: 100%;
+            display: flex;
+            animation-name: slideme;
+            animation-duration: 10s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        .slide .Slider>div{
+            width: 100%;
+        }
+        .slide .Slider>div:nth-child(1){
+            background: url("assets/images/IMG1.jpg.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide .Slider>div:nth-child(2){
+            background: url("assets/images/IMG2.jpg.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide .Slider>div:nth-child(3){
+            background: url("assets/images/IMG3.jpg.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide .Slider>div:nth-child(4){
+            background: url("assets/images/IMG4.jpg.png");
+            background-size: cover;
+            background-position: center;
+        }
 
 
+        @keyframes slideme {
+            0%,15%{
+                transform: translateX(0);
+            }
+            25%,40%{
+                transform: translateX(-25%);
+            }
+            50%,70%{
+                transform: translateX(-50%);
+            }
 
+            80%,100%{
+                transform: translateX(-75%);
+            }
+        }
     </style>
 </head>
 <body>
@@ -474,7 +782,7 @@
     </section>
 
     <section class="about-me">
-        <div class="About-Me">About Me</div>
+        <div class="caption-text">About Me</div>
         <div class="texts">
             <div class="about-text">
                 <div class="caption">Developer <span>&</span> <span>Designer</span></div>
@@ -501,7 +809,7 @@
     </section>
 
     <section class="journey">
-        <div class="Journey-text">My Life Journey</div>
+        <div class="caption-text">My Life Journey</div>
         <div class="center-image">
             <div class="arrow">
                 <span></span>
@@ -544,9 +852,97 @@
     </div>
     </section>
 
-    <section></section>
-    <section></section>
-    <section></section>
+    <section class="projects">
+        <div class="caption-text">Projects</div>
+    <!--- images--->
+        <div class="all">
+            <div class="image-area">
+                <div class="hover">
+                    <div class="center">
+                        <div>Project</div>
+
+                        <div>CityZen Medicare</div>
+
+                        <div><a href="#" class="view">View Details</a></div>
+                    </div>
+                </div>
+                <img src="assets/images/ProjectCityzen.png"></div>
+            <div class="image-area">
+                <div class="hover">
+                    <div class="center">
+                        <div>Project</div>
+
+                        <div>Super Market</div>
+
+                        <div><a href="#" class="view">View Details</a></div>
+                    </div>
+                </div>
+                <img src="assets/images/ProjectSupermarket.png"></div>
+            <div class="image-area">
+                <div class="hover">
+                    <div class="center">
+                        <div>Project</div>
+
+                        <div>Hotel </div>
+                        <div>Blue Ocean </div>
+
+                        <div><a href="#" class="view">View Details</a></div>
+                    </div>
+                </div>
+                <img src="assets/images/ProjectHotel.png"></div>
+        </div>
+    <!--- Button--->
+        <div class="Button"><a href="#"><div class="View-more">View More</div>
+            <div class="arrow-right">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div></a>
+
+
+        </div>
+
+    </section>
+
+    <section class="skills">
+        <div class="caption-text">My Skills</div>
+        <div class="Skills">
+            <div>
+                <img src="assets/images/javaicon.png">
+            </div>
+            <div>
+                <img src="assets/images/Htmlicon.png">
+            </div>
+            <div><img src="assets/images/MySqlicon.png"></div>
+            <div><img src="assets/images/cssicon.jpg"></div>
+            <div><img src="assets/images/javaScriptIconicon.png"></div>
+        </div>
+        <div class="caption-text-two">Tools</div>
+        <div class="Tools">
+            <div>
+                <img src="assets/images/IntellijIcon.png">
+            </div>
+            <div>
+                <img src="assets/images/SceaneBuilderIcon.png">
+            </div>
+            <div><img src="assets/images/XDIcon.png"></div>
+            <div><img src="assets/images/PSIcon.png"></div>
+            <div><img src="assets/images/VSCodeIcon.png"></div>
+        </div>
+    </section>
+
+    <section class="Gallery">
+        <div class="caption-text">Gallery</div>
+        <div class="slide">
+            <div class="Slider">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+    </section>
     <section></section>
 
 
