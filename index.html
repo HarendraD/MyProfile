@@ -744,6 +744,131 @@
                 transform: translateX(-75%);
             }
         }
+
+/*----Contact Me---------------------------------------------------*/
+        .contact-me{
+            height: 80vh;
+        }
+        .contact-me .center{
+            position: relative;
+            width: 90%;
+            height: 80%;
+            top: 20%;
+            left: 5%;
+            display: flex;
+        }
+        .contact-me .center>div:nth-child(1){
+            margin-left: 20px;
+            margin-bottom: 60px;
+            margin-right: 10px;
+            height: 60%;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            font-size: 32px;
+            justify-content: space-between;
+
+        }
+        .contact-me .center>div:nth-child(1)>div{
+
+        }
+
+        .contact-me .center>div:nth-child(2){
+            margin-left: 20px;
+            margin-bottom: 20px;
+            margin-right: 10px;
+            height: 95%;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+
+        }
+        .contact-me .center>div:nth-child(2)>input{
+            width: 70%;
+            height: 40px;
+            font-size: 20px;
+
+        }
+        .contact-me .center>div:nth-child(2)>textarea{
+            width: 90%;
+            height: 150px;
+            font-size: 15px;
+        }
+        .contact-me .center>div:nth-child(2)>button{
+            width: 150px;
+            height: 50px;
+            font-size: 35px;
+            background: greenyellow;
+            border-radius: 10%;
+            margin-left: 75%;
+        }
+        .contact-me .center>div:nth-child(2)>button:hover{
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+        .contact-me .center>div:nth-child(2)>textarea:hover,
+        .contact-me .center>div:nth-child(2)>input:hover{
+            background-color: rgba(3, 52, 43, 0.49);
+
+        }
+
+/*----footer---------------------------------------------------*/
+        footer{
+            position: relative;
+            width: 100%;
+            height: 150px;
+            background-color: black;
+        }
+        footer>div:nth-child(1) {
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+
+        }
+        footer>div:nth-child(2){
+            text-align: center;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            text-space: 10px;
+        }
+        footer>div:nth-child(3){
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            top: 60px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: max-content;
+            height: max-content;
+        }
+        footer>div>a>img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 0 20px;
+        }
+        footer>div>a>img:hover{
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+
+        footer>div:nth-child(4){
+            position: relative;
+            top: 40%;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -943,7 +1068,40 @@
         </div>
 
     </section>
-    <section></section>
+
+    <section class="contact-me">
+        <div class="caption-text">Contact Me</div>
+        <div class="center">
+            <div class="contact-text">
+                <div>Your Name</div>
+                <div>Your Email</div>
+                <div>Contact No</div>
+                <div>Massage</div>
+            </div>
+            <div class="contact-textfeild">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <textarea></textarea>
+                <button>Send</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>Harendra Dilshan</div>
+        <div>+94718818902,+94763895857</div>
+        <div>
+            <a href="#"><img src="assets/images/facbookIcon.png"></a>
+            <a href="#"><img src="assets/images/skypeIcon.png"></a>
+            <a href="#"><img src="assets/images/LinkedInIcon.png"></a>
+            <a href="#"><img src="assets/images/twittwericon.png"></a>
+            <a href="#"><img src="assets/images/WhatsappIcon.png"></a>
+        </div>
+        <div>Thank You For Visit My Portfolio</div>
+
+
+    </footer>
 
 
 </body>
