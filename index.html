@@ -243,7 +243,197 @@
         .about-image:hover .girl{
             left: 45%;
         }
-/*----journy---------------------------------------------------*/
+/*----journey---------------------------------------------------*/
+        .Journey-text{
+            position: absolute;
+            left: 0;
+            top: 10px;
+            right: 0;
+            margin: auto;
+            width: max-content;
+            font-size: 30px;
+            font-family: monospace;
+            text-decoration-line: underline;
+        }
+        .center-image{
+            position: absolute;
+            top: 30px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 150px;
+            height: 90vh;
+            background-image: url("assets/images/flowImage.png");
+        }
+
+        .center-image .arrow{
+            position: absolute;
+            top: 310px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: max-content;
+            height: max-content;
+
+        }
+        .center-image .arrow>span{
+            position: relative;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-bottom: 10px solid #0059ff;
+            border-right: 10px solid #0059ff;
+            box-shadow: 5px 5px 5px 1px #ff0062;
+
+            transform: rotate(45deg);
+            animation: down 2s infinite;
+        }
+        .arrow>span:nth-child(2){
+            animation-delay:-.2s;
+        }
+        .arrow>span:nth-child(3){
+            animation-delay:-.4s;
+        }
+        .arrow>span:nth-child(4){
+            animation-delay:-.6s;
+        }
+        @keyframes down {
+            0%{
+                opacity: 1;
+                transform: rotate(45deg) translate(-20px,-20px);
+            }
+            50%{
+                opacity: 1;
+
+            }
+            100%{
+                opacity: 0;
+                transform: rotate(45deg) translate(20px,20px);
+            }
+        }
+        .one {
+            position: absolute;
+            top: 10%;
+            left: 15%;
+            margin: auto;
+            width: 400px;
+            height: 200px;
+            display: flex;
+        }
+        .one>div:nth-child(1){
+            position: relative;
+            height: 100%;
+            width: 60%;
+            font-size: 30px;
+
+        }
+        .one>div:nth-child(2){
+            position: relative;
+            height: 100%;
+            width: 40%;
+
+
+        }
+        .one>div:nth-child(2)>img{
+            width: 160px;
+            height: 200px;
+        }
+        .two {
+            position: absolute;
+            top: 25%;
+            right: 15%;
+            margin: auto;
+            width: 400px;
+            height: 200px;
+            display: flex;
+        }
+        .two>div:nth-child(1){
+            position: relative;
+            height: 100%;
+            width: 60%;
+            font-size: 30px;
+
+        }
+        .two>div:nth-child(2){
+            position: relative;
+            height: 100%;
+            width: 40%;
+
+
+        }
+        .two>div:nth-child(2)>img{
+            width: 160px;
+            height: 200px;
+        }
+
+
+        .three {
+            position: absolute;
+            top: 45%;
+            left: 15%;
+            margin: auto;
+            width: 400px;
+            height: 200px;
+            display: flex;
+        }
+        .three>div:nth-child(1){
+            position: relative;
+            height: 100%;
+            width: 60%;
+            font-size: 30px;
+
+        }
+        .three>div:nth-child(2){
+            position: relative;
+            height: 100%;
+            width: 40%;
+
+
+        }
+        .three>div:nth-child(2)>img{
+            width: 160px;
+            height: 200px;
+        }
+
+        .four {
+            position: absolute;
+            top: 60%;
+            right: 15%;
+            margin: auto;
+            width: 400px;
+            height: 200px;
+            display: flex;
+        }
+        .four>div:nth-child(1){
+            position: relative;
+            height: 100%;
+            width: 60%;
+            font-size: 30px;
+
+        }
+        .four>div:nth-child(2){
+            position: relative;
+            height: 100%;
+            width: 40%;
+
+
+        }
+        .four>div:nth-child(2)>img{
+            width: 160px;
+            height: 200px;
+        }
+
+/*----Projects---------------------------------------------------*/
+
+
+
 
 
     </style>
@@ -310,7 +500,50 @@
         </div>
     </section>
 
-    <section class="journy"></section>
+    <section class="journey">
+        <div class="Journey-text">My Life Journey</div>
+        <div class="center-image">
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="one">
+            <div class="text">
+                WP/K/Pothupitiya Maha Vidyalaya
+                From 2006 To 2016
+                (Ordinary Level)
+            </div>
+            <div class="image"><img src="assets/images/J-one.png"></div>
+        </div>
+        <div class="two">
+            <div class="text">
+                Wadduwa Central College,Kaluthara,Sri Lanka
+                From 2017 To 2019
+                (Advanced Level)
+                (Technology Stream)
+            </div>
+            <div class="image"><img src="assets/images/J-two.png"></div>
+        </div>
+        <div class="three">
+        <div class="text">
+            Work At Global System Sloution As a Quality Assurance Technician
+            (6 months)
+        </div>
+        <div class="image"><img src="assets/images/J-three.png"></div>
+    </div>
+        <div class="four">
+            <div class="text">
+                Form 2020 to the present,
+                Studying Software engineer at IJSE(Institute of Software Engineering)
+
+            </div>
+        <div class="image"><img src="assets/images/J-four.png"></div>
+    </div>
+    </section>
+
     <section></section>
     <section></section>
     <section></section>
