@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Assignment 7</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
+
+    <style>
+        body > main > section{
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-color: #90fffa;
+            overflow: hidden;
+        }
+
+
+        body > main > section > div{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-color: rgb(75, 148, 180);
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+
+            
+        }
+        body > main > section > div::after{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            content: "";
+            border: 20px solid #0c64f6;
+            border-top: 20px solid #ff025f;
+            transition: all 0.5s;
+            border-radius: 50%;
+        }
+        body > main > section > div >h1{
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: max-content;
+            height: max-content;
+            color: white;
+            font-size: 30px;
+            font-family: 'Bebas Neue', cursive;
+            z-index: 3;
+        }
+        body > main > section > div:hover::after{
+            border-top: 20px solid red;
+            transform: rotate(360deg);
+            transition: all 0.5s;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <div>
+                <h1>RWAD</h1>
+            </div>    
+        </section>
+    </main>
+</body>
+</html>
