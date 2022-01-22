@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .row{
+            margin: 0;
+        }
+        .flex-column{
+            height: 92vh;
+            background-color: lightcyan;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg avbar navbar-dark bg-primary">
+    <div class="container-fluid">
+        <div class="navbar-brand">Super Market</div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Orders</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Items</a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-dark me-2"><i class="fas fa-user-plus"></i> Sign Up</button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-danger "><i class="fas fa-sign-in-alt"></i> Log out</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="flex-column">
+    <div class="row py-2">
+        <div class="col-7 ">
+            <div class="modal-content w-100 p-3">
+                <div class="modal-header">
+                    <h5 class="modal-title">New Customer</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="row">
+                        <div class="col-4">
+                            <label for="Name" class="col-sm-2 col-form-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="Name" placeholder="Customer Name">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <label for="Address" class="col-sm-2 col-form-label">Address</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="Address" placeholder="Address">
+                            </div>
+                        </div>
+                    </form>
+                    <form class="row py-2">
+                        <div class="col-5">
+                            <label for="Name" class="col-sm-2 col-form-label">City</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="City" placeholder="City">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <label for="Address" class="col-12 col-form-label">Contact-NO</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="Contact-Number" placeholder="Contact-Number">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Update</button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-6">
+
+        </div>
+    </div>
+</section>
+
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
