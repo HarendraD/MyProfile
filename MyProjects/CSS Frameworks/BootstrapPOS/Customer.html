@@ -5,12 +5,38 @@
     <title>Customers</title>
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .row{
-            margin: 0;
+        .form-control{
+            background: transparent;
+            border: 2px solid black;
+
         }
-        .flex-column{
-            height: 92vh;
-            background-color: lightcyan;
+        .form-control:focus{
+            background: transparent;
+            box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+        }
+        section{
+            background: url("assets/img/Customer.png");
+        }
+        .form-control{
+            font-weight: bold;
+            background: transparent;
+            border: 2px solid black;
+
+        }
+        .form-control:focus{
+            background: transparent;
+            box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+        }
+        .btn{
+            font-weight: bold;
+            color: black;
+        }
+        th{
+            padding: 0.5rem 0.2rem;
+        }
+        tr:hover,
+        tr:focus{
+            background-color: rgba(121, 233, 255, 0.85);
         }
     </style>
 </head>
@@ -25,73 +51,128 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Customer</a>
+                    <a class="nav-link active" aria-current="page" href="Customer.html">Customer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Orders</a>
+                    <a class="nav-link" href="Item.html">Items</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Items</a>
-                </li>
-                <li class="nav-item">
-                    <button type="button" class="btn btn-outline-dark me-2"><i class="fas fa-user-plus"></i> Sign Up</button>
-                </li>
-                <li class="nav-item">
-                    <button type="button" class="btn btn-outline-danger "><i class="fas fa-sign-in-alt"></i> Log out</button>
+                    <a class="nav-link" href="Order.html">Orders</a>
                 </li>
             </ul>
+            <div class="d-flex align-content-center">
+                <button type="button" class="btn btn-outline-dark me-2" style="background-color: rgba(209,255,255,0.69)"><i class="fas fa-user-plus"></i> Sign Up</button>
+                <button type="button" class="btn btn-outline-danger " style="background-color: rgba(255,213,213,0.79)"><i class="fas fa-sign-in-alt"></i> Log out</button>
+            </div>
         </div>
     </div>
 </nav>
-<section class="flex-column">
-    <div class="row py-2">
-        <div class="col-7 ">
-            <div class="modal-content w-100 p-3">
-                <div class="modal-header">
-                    <h5 class="modal-title">New Customer</h5>
+<section class="container-fluid mh-100 pb-7 pb-sm-7">
+    <div class="row py-1">
+        <div class="col col-sm-12 col-lg-5 ">
+            <div class="modal-content w-100 p-1" style="border: 3px solid #0f12ec; background:rgba(255,255,255,0.87)">
+                <div class="modal-header py-2" style="align-items: center; justify-content: center">
+                    <h5 class="modal-title">Customer</h5>
                 </div>
                 <div class="modal-body">
                     <form class="row">
-                        <div class="col-4">
-                            <label for="Name" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-8 py-sm-1">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                        <div class="col-4 py-sm-1">
+                            <button class="btn btn-outline-info " type="submit">Search</button>
+                        </div>
+                        <div class="col-12 py-sm-1">
+                            <label for="Name" class="col-2 col-form-label">Name</label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control" id="Name" placeholder="Customer Name">
+                                <input type="text" class="form-control" id="Name" placeholder="Customer Name">
                             </div>
                         </div>
-                        <div class="col-8">
-                            <label for="Address" class="col-sm-2 col-form-label">Address</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="Address" placeholder="Address">
-                            </div>
-                        </div>
-                    </form>
-                    <form class="row py-2">
-                        <div class="col-5">
-                            <label for="Name" class="col-sm-2 col-form-label">City</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="City" placeholder="City">
-                            </div>
-                        </div>
-                        <div class="col-7">
-                            <label for="Address" class="col-12 col-form-label">Contact-NO</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="Contact-Number" placeholder="Contact-Number">
-                            </div>
-                        </div>
-                    </form>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
-                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Update</button>
 
+                        <div class="col-12 py-sm-1">
+                            <label for="Address" class="col-2 col-form-label">Address</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="Address" placeholder="Address">
+                            </div>
+                        </div>
+                        <div class="col-6 py-sm-1">
+                            <label for="Age" class="col-2 col-form-label">Age</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="Age" placeholder="Age">
+                            </div>
+                        </div>
+                        <div class="col-8 py-sm-1">
+                            <label for="City" class="col-2 col-form-label">City</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="City" placeholder="City">
+                            </div>
+                        </div>
+                        <div class="col-8 py-sm-1">
+                            <label for="Contact-Number" class="col-12 col-form-label">Contact-Number</label>
+                            <div class="col-sm-10">
+                                <input type="tel" class="form-control" id="Contact-Number" placeholder="Contact-Number">
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Update</button>
+                        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Delete</button>
                     </div>
                 </div>
             </div>
 
         </div>
-        <div class="col-6">
+            <div class="col col-sm-12 col-lg-7 ">
+                <div class="modal-content w-100 h-100 p-1" style="border: 3px solid #49f107; background:rgba(255,255,255,0.78)">
+                    <div class="modal-header" style="align-items: center; justify-content: center">
+                        <h5 class="modal-title">Customer Details</h5>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-hover">
+                        <thead>
+                        <tr class="table-primary">
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">City</th>
+                            <th scope="col">Contact-No</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">01</th>
+                            <td>Dilshan</td>
+                            <td>Pothupitiya</td>
+                            <td>24</td>
+                            <td>Kaluthara</td>
+                            <td>+94728838456</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">02</th>
+                            <td>Dilshan</td>
+                            <td>Pothupitiya</td>
+                            <td>24</td>
+                            <td>Kaluthara</td>
+                            <td>+94728838456</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">03</th>
+                            <td>Dilshan</td>
+                            <td>Pothupitiya</td>
+                            <td>24</td>
+                            <td>Kaluthara</td>
+                            <td>+94728838456</td>
+                        </tr>
 
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 </section>
 
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>

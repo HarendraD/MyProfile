@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+        section{
+            background: url("assets/img/background.png");
+        }
+        .form-control{
+            font-weight: bold;
+            background: transparent;
+            border: 2px solid black;
+
+        }
+        .form-control:focus{
+            background: transparent;
+            box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+        }
+        .btn{
+            font-weight: bold;
+            color: black;
+        }
+        .form-control{
+            background: transparent;
+            border: 2px solid black;
+
+        }
+        .form-control:focus{
+            background: transparent;
+            box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+        }
+        tr:hover,
+        tr:focus{
+            background-color: rgba(161, 237, 252, 0.85);
+        }
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg avbar navbar-dark bg-primary">
+    <div class="container-fluid">
+        <div class="navbar-brand">Super Market</div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="Customer.html">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Item.html">Items</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Order.html">Orders</a>
+                </li>
+            </ul>
+            <div class="d-flex align-content-center ">
+                <button type="button" class="btn btn-outline-dark me-2" style="background-color: rgba(209,255,255,0.69)"><i class="fas fa-user-plus"></i> Sign Up</button>
+                <button type="button" class="btn btn-outline-danger" style="background-color: rgba(255,213,213,0.79)"><i class="fas fa-sign-in-alt"></i> Log out</button>
+            </div>
+        </div>
+    </div>
+</nav>
+<section class="container-fluid mh-100 pb-7 pb-sm-7">
+    <div class="row p-4">
+        <div class="col col-sm-12 p-sm-2 col-lg-5 p-lg-0 px-lg-2">
+            <div class="modal-content w-100 p-1" style="border: 2px solid rgba(0,139,139,0.56); background:rgba(255,255,255,0.87)">
+                <div class="modal-header" style="align-items: center; justify-content: center">
+                    <h5 class="modal-title" style="text-decoration: underline; font-family: cursive; font-size: 25px">ITEM</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="row">
+                        <div class="col-8 py-sm-1">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search Items" aria-label="Search">
+                        </div>
+                        <div class="col-4 py-sm-1">
+                            <button class="btn btn-outline-info " type="submit">Search</button>
+                        </div>
+                        <div class="col-12 py-sm-1">
+                            <label for="Code" class="col-2 col-form-label">Code</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="Code" placeholder="Item Code">
+                            </div>
+                        </div>
+
+                        <div class="col-12 py-sm-1">
+                            <label for="Description" class="col-2 col-form-label">Description</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="Description" placeholder="Description">
+                            </div>
+                        </div>
+                        <div class="col col-lg-12 col-sm-10 py-sm-1">
+                            <label for="Unit-Price" class="col-12 col-form-label">Unit-Price</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="Unit-Price" placeholder="Unit-Price">
+                            </div>
+                        </div>
+                        <div class="col-8 py-sm-1">
+                            <label for="Quantity" class="col-2 col-form-label">Quantity</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="Quantity" placeholder="Quantity">
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <div class="modal-footer py-4">
+                        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Update</button>
+                        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col col col-sm-12 p-sm-2 col-lg-7 p-lg-0 " >
+            <div class="modal-content w-100 h-100 p-1" style="border: 2px solid rgba(0,139,139,0.56); background:rgba(255,255,255,0.87)">
+                <div class="modal-header" style="align-items: center; justify-content: center">
+                    <h5 class="modal-title">Item Details</h5>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr class="table-info">
+                            <th scope="col">Code</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Unit-Price</th>
+                            <th scope="col">Quantity</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">I001</th>
+                            <td>Cheese</td>
+                            <td>RS.500</td>
+                            <td>100</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">I002</th>
+                            <td>Cheese</td>
+                            <td>RS.500</td>
+                            <td>100</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">I003</th>
+                            <td>Cheese</td>
+                            <td>RS.500</td>
+                            <td>100</td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
