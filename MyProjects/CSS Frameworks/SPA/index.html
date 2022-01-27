@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #navbar{
+            width: 99vw;
+            z-index: 100;
+            position: fixed;
+        }
+/*customer----------------------------------------------------------------*/
+
+        .form-control:focus{
+            background: transparent;
+            box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+        }
+        #customer{
+            background: url("assets/img/Customer.png");
+            padding-top: 4%;
+            border-bottom: 4px solid black;
+
+
+        }
+        .form-control{
+            font-weight: bold;
+            background: transparent;
+            border: 2px solid black;
+
+        }
+        .btn{
+            font-weight: bold;
+            color: black;
+        }
+        th{
+            padding: 0.5rem 0.2rem;
+        }
+        tr:hover,
+        tr:focus{
+            background-color: rgba(121, 233, 255, 0.85);
+        }
+
+/*item----------------------------------------------------------------*/
+        #item{
+            background: url("assets/img/background.png");
+            padding-top: 5%;
+            border-bottom: 4px solid black;
+
+
+        }
+/*order----------------------------------------------------------------*/
+        #order{
+            background: url("assets/img/Customer.png");
+            padding-top: 4%;
+            border-bottom: 4px solid black;
+
+
+        }
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg avbar navbar-dark bg-primary" id="navbar">
+    <div class="container-fluid">
+        <div class="navbar-brand">Super Market</div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" id="btnCustomer" aria-current="page" href="#customer">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="btnItem" href="#item">Items</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="btnOrder" href="#order">Orders</a>
+                </li>
+            </ul>
+            <div class="d-flex align-content-center">
+                <button type="button" class="btn btn-outline-dark me-2" style="background-color: rgba(209,255,255,0.69)"><i class="fas fa-user-plus"></i> Sign Up</button>
+                <button type="button" class="btn btn-outline-danger " style="background-color: rgba(255,213,213,0.79)"><i class="fas fa-sign-in-alt"></i> Log out</button>
+            </div>
+        </div>
+    </div>
+</nav>
+<section class="container-fluid mh-100 pb-7 pb-sm-7" id="customer">
+    <div class="row py-1">
+        <div class="col col-sm-12 col-lg-5 ">
+            <div class="modal-content w-100 p-1" style="border: 3px solid #0f12ec; background:rgba(255,255,255,0.87)">
+                <div class="modal-header py-2" style="align-items: center; justify-content: center">
+                    <h5 class="modal-title">Customer</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="row">
+                        <div class="col-8 py-sm-1">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                        <div class="col-4 py-sm-1">
+                            <button class="btn btn-outline-info " type="submit">Search</button>
+                        </div>
+                        <div class="col-12 py-sm-1">
+                            <label for="Name" class="col-2 col-form-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="Name" placeholder="Customer Name">
+                            </div>
+                        </div>
+
+                        <div class="col-12 py-sm-1">
+                            <label for="Address" class="col-2 col-form-label">Address</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="Address" placeholder="Address">
+                            </div>
+                        </div>
+                        <div class="col-6 py-sm-1">
+                            <label for="Age" class="col-2 col-form-label">Age</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="Age" placeholder="Age">
+                            </div>
+                        </div>
+                        <div class="col-8 py-sm-1">
+                            <label for="City" class="col-2 col-form-label">City</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="City" placeholder="City">
+                            </div>
+                        </div>
+                        <div class="col-8 py-sm-1">
+                            <label for="Contact-Number" class="col-12 col-form-label">Contact-Number</label>
+                            <div class="col-sm-10">
+                                <input type="tel" class="form-control" id="Contact-Number" placeholder="Contact-Number">
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-success">Save</button>
+                        <button type="button" class="btn btn-outline-warning">Update</button>
+                        <button type="button" class="btn btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col col-sm-12 col-lg-7 ">
+            <div class="modal-content w-100 h-100 p-1" style="border: 3px solid #49f107; background:rgba(255,255,255,0.78)">
+                <div class="modal-header" style="align-items: center; justify-content: center">
+                    <h5 class="modal-title">Customer Details</h5>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr class="table-primary">
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">City</th>
+                            <th scope="col">Contact-No</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">01</th>
+                            <td>Dilshan</td>
+                            <td>Pothupitiya</td>
+                            <td>24</td>
+                            <td>Kaluthara</td>
+                            <td>+94728838456</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">02</th>
+                            <td>Dilshan</td>
+                            <td>Pothupitiya</td>
+                            <td>24</td>
+                            <td>Kaluthara</td>
+                            <td>+94728838456</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">03</th>
+                            <td>Dilshan</td>
+                            <td>Pothupitiya</td>
+                            <td>24</td>
+                            <td>Kaluthara</td>
+                            <td>+94728838456</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid mh-100 pb-7 pb-sm-7" id="item">
+    <div class="row p-4">
+        <div class="col col-sm-12 p-sm-2 col-lg-5 p-lg-0 px-lg-2">
+            <div class="modal-content w-100 p-1" style="border: 2px solid rgba(0,139,139,0.56); background:rgba(255,255,255,0.87)">
+                <div class="modal-header" style="align-items: center; justify-content: center">
+                    <h5 class="modal-title" style="text-decoration: underline; font-family: cursive; font-size: 25px">ITEM</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="row">
+                        <div class="col-8 py-sm-1">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search Items" aria-label="Search">
+                        </div>
+                        <div class="col-4 py-sm-1">
+                            <button class="btn btn-outline-info " type="submit">Search</button>
+                        </div>
+                        <div class="col-12 py-sm-1">
+                            <label for="Code" class="col-2 col-form-label">Code</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="Code" placeholder="Item Code">
+                            </div>
+                        </div>
+
+                        <div class="col-12 py-sm-1">
+                            <label for="Description" class="col-2 col-form-label">Description</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="Description" placeholder="Description">
+                            </div>
+                        </div>
+                        <div class="col col-lg-12 col-sm-10 py-sm-1">
+                            <label for="Unit-Price" class="col-12 col-form-label">Unit-Price</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="Unit-Price" placeholder="Unit-Price">
+                            </div>
+                        </div>
+                        <div class="col-8 py-sm-1">
+                            <label for="Quantity" class="col-2 col-form-label">Quantity</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="Quantity" placeholder="Quantity">
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <div class="modal-footer py-4">
+                        <button type="button" class="btn btn-outline-success">Save</button>
+                        <button type="button" class="btn btn-outline-warning">Update</button>
+                        <button type="button" class="btn btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col col col-sm-12 p-sm-2 col-lg-7 p-lg-0 " >
+            <div class="modal-content w-100 h-100 p-1" style="border: 2px solid rgba(0,139,139,0.56); background:rgba(255,255,255,0.87)">
+                <div class="modal-header" style="align-items: center; justify-content: center">
+                    <h5 class="modal-title">Item Details</h5>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr class="table-info">
+                            <th scope="col">Code</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Unit-Price</th>
+                            <th scope="col">Quantity</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">I001</th>
+                            <td>Cheese</td>
+                            <td>RS.500</td>
+                            <td>100</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">I002</th>
+                            <td>Cheese</td>
+                            <td>RS.500</td>
+                            <td>100</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">I003</th>
+                            <td>Cheese</td>
+                            <td>RS.500</td>
+                            <td>100</td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid pb-7 pb-sm-7" id="order">
+    <div class="row py-1">
+        <div class="col-12 col-sm-12 col-lg-12  "style="border-bottom: 2px solid rgba(0,71,86,0.81)">
+            <div class="row py-1">
+                <div class="col-lg-10 col-sm-8">
+                    <div class="row">
+                        <h5 class="col-3" style="width: max-content">Order-ID :-</h5>
+                        <h5 class="col-2" style="width: max-content">001</h5>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-4 text-end">
+                    <div class="row">
+                        <h5 class="col-6 col-sm-8" style="width: max-content">23/01/2022</h5>
+                        <h5 class="col-6 col-sm-8" style="width: max-content">21:11</h5>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-12 col-sm-12 col-lg-4 py-2 ">
+            <div class="modal-content w-100 p-1" style="border:0; background:rgba(237,242,255,0.90)">
+                <div class="modal-header py-2" style="align-items: center; justify-content: center">
+                    <h5 class="modal-title">Select Customer</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="row">
+                        <div class="col-5 ">
+                            <label for="CustID" class="col-12 col-form-label">Customer-ID</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="CustID" placeholder="Customer-ID">
+                            </div>
+                        </div>
+                        <div class="col-7 ">
+                            <label for="CName" class="col-2 col-form-label">Name</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="CName" placeholder="Customer Name">
+                            </div>
+                        </div>
+
+                        <div class="col-12 ">
+                            <label for="CAddress" class="col-2 col-form-label">Address</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="CAddress" placeholder="Address">
+                            </div>
+                        </div>
+                        <div class="col-4 ">
+                            <label for="CAge" class="col-2 col-form-label">Age</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="CAge" placeholder="Age">
+                            </div>
+                        </div>
+                        <div class="col-8 ">
+                            <label for="CContact-NO" class="col-12 col-form-label">Contact-Number</label>
+                            <div class="col-sm-12">
+                                <input type="tel" class="form-control" id="CContact-NO" placeholder="Contact-Number">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-lg-4 pt-2 ">
+            <div class="modal-content w-100 p-1" style="border:0; background:rgba(253,255,238,0.90)">
+                <div class="modal-header py-2" style="align-items: center; justify-content: center">
+                    <h5 class="modal-title">Select Item</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="row pb-1">
+                        <div class="col-4 ">
+                            <label for="ICode" class="col-12 col-form-label">Item-Code</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="ICode" placeholder="Item-Code">
+                            </div>
+                        </div>
+                        <div class="col-8 ">
+                            <label for="IDescription" class="col-12 col-form-label">Description</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="IDescription" placeholder="Description">
+                            </div>
+                        </div>
+
+                        <div class="col-8 ">
+                            <label for="IUnit-Price" class="col-12 col-form-label">Unit-Price</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="IUnit-Price" placeholder="Unit-Price">
+                            </div>
+                        </div>
+                        <div class="col-4 ">
+                            <label for="QTY-On-Store" class="col-12 col-form-label">QTY-On-Store</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="QTY-On-Store" placeholder="QTY-On-Store">
+                            </div>
+                        </div>
+                        <div class="col-6 ">
+                            <label for="QTY-Need" class="col-12 col-form-label">QTY-Need</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="QTY-Need" placeholder="QTY-Need">
+                            </div>
+                        </div>
+                        <div class="col-6 pb-1">
+                            <div class="col-sm-12 pt-4 px-2 text-end">
+                                <button type="button" class="btn btn-outline-success" style="width: 80%; border-radius: 30px">ADD</button>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-lg-4 py-2 ">
+            <div class="modal-content w-100 p-1" style="border: 0; background:rgba(233,255,253,0.90)">
+                <div class="modal-body">
+                    <form class="row pb-2">
+                        <div class="col-12 ">
+                            <div class="row">
+                                <h5 class="col-6 font-weight-bold" style="width: max-content;font-size: 35px;color: blue">Total RS:</h5>
+                                <h6 class="col-6 font-weight-bold" style="width: max-content;font-size: 35px;color: red">10500</h6>
+                            </div>
+                        </div>
+                        <div class="col-8 ">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" placeholder="Discount">
+                            </div>
+                        </div>
+                        <div class="col-12 pt-2">
+                            <div class="row">
+                                <h5 class="col-6 font-weight-bold" style="width: max-content;font-size: 35px;color: blue">Final-Total RS:</h5>
+                                <h6 class="col-6 font-weight-bold" style="width: max-content;font-size: 35px;color: red">9905</h6>
+                            </div>
+                        </div>
+                        <div class="col-8 ">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" placeholder="Cash">
+                            </div>
+                        </div>
+                        <div class="col-4 ">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" placeholder="Balance">
+                            </div>
+                        </div>
+
+                        <div class="col-6 ">
+                            <div class="row">
+                                <div class="col-sm-6 pt-5">
+                                    <button type="button" class="btn btn-outline-danger" style="width: 100px;border-radius: 30px">Delete</button>
+                                </div>
+                                <div class="col-sm-6 pt-5">
+                                    <button type="button" class="btn btn-outline-success" style="width: 100px;border-radius: 30px">Print</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-lg-12 py-2">
+            <div class="modal-content w-100 p-1" style="border: 0; background:rgba(255,242,242,0.90)">
+                <div class="modal-body">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr class="table-primary">
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Item-Code</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Unit-Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">01</th>
+                            <td>Dilshan</td>
+                            <td>I001</td>
+                            <td>Samba</td>
+                            <td>150</td>
+                            <td>10</td>
+                            <td>1500</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">01</th>
+                            <td>Dilshan</td>
+                            <td>I001</td>
+                            <td>Samba</td>
+                            <td>150</td>
+                            <td>10</td>
+                            <td>1500</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">01</th>
+                            <td>Dilshan</td>
+                            <td>I001</td>
+                            <td>Samba</td>
+                            <td>150</td>
+                            <td>10</td>
+                            <td>1500</td>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js">
+    document.getElementById("btnCustomer").addEventListener("click",function (){
+        document.getElementById("customer").style.display="block";
+        document.getElementById("item").style.display="none";
+        document.getElementById("order").style.display="none";
+    })
+    document.getElementById("btnItem").addEventListener("click",function (){
+        document.getElementById("item").style.display="block";
+        document.getElementById("customer").style.display="none";
+        document.getElementById("order").style.display="none";
+    })
+    document.getElementById("btnOrder").addEventListener("click",function (){
+        document.getElementById("order").style.display="block";
+        document.getElementById("item").style.display="none";
+        document.getElementById("customer").style.display="none";
+    })
+
+</script>
+</body>
+</html>
