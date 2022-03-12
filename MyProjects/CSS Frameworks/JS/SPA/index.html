@@ -18,8 +18,9 @@
         }
         #customer{
             background: url("assets/img/Customer.png");
-            padding-top: 4%;
+            padding-top: 5%;
             border-bottom: 4px solid black;
+            height: 100vh;
 
 
         }
@@ -44,8 +45,9 @@
 /*item----------------------------------------------------------------*/
         #item{
             background: url("assets/img/background.png");
-            padding-top: 5%;
+            padding-top: 2%;
             border-bottom: 4px solid black;
+            height: 100vh;
 
 
         }
@@ -54,7 +56,7 @@
             background: url("assets/img/Customer.png");
             padding-top: 4%;
             border-bottom: 4px solid black;
-
+            height: 100vh;
 
         }
 
@@ -87,7 +89,7 @@
         </div>
     </div>
 </nav>
-<section class="container-fluid mh-100 pb-7 pb-sm-7" id="customer">
+<section class="container-fluid mh-100 " id="customer" >
     <div class="row py-1">
         <div class="col col-sm-12 col-lg-5 ">
             <div class="modal-content w-100 p-1" style="border: 3px solid #0f12ec; background:rgba(255,255,255,0.87)">
@@ -96,49 +98,55 @@
                 </div>
                 <div class="modal-body">
                     <form class="row">
-                        <div class="col-8 py-sm-1">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <div class="col-8 py-2 ">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchCust">
                         </div>
-                        <div class="col-4 py-sm-1">
-                            <button class="btn btn-outline-info " type="submit">Search</button>
+                        <div class="col-4 py-2">
+                            <button class="btn btn-outline-info " type="submit" id="btnSearchCust">Search</button>
                         </div>
-                        <div class="col-12 py-sm-1">
-                            <label for="Name" class="col-2 col-form-label">Name</label>
+                        <div class="col-12 py-2">
+                            <label for="txtId" class="col-2 col-form-label" style="padding: 0;">Customer-ID</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="Name" placeholder="Customer Name">
+                                <input type="text" class="form-control" id="txtId" placeholder="Customer-ID">
+                            </div>
+                            <div class="col-sm-10" style="font-size: 10px;color: #ff253a" id="validationTextId">
+                                Input Format-"C001"
+                            </div>
+                        </div>
+                        <div class="col-12 py-2">
+                            <label for="txtName" class="col-2 col-form-label" style="padding: 0;">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="txtName" placeholder="Customer Name">
+                            </div>
+                            <div class="col-sm-10" style="font-size: 10px;color: #ff253a" id="validationTextName">
+                                Input Format-"Harendra Dilshan"
                             </div>
                         </div>
 
-                        <div class="col-12 py-sm-1">
-                            <label for="Address" class="col-2 col-form-label">Address</label>
+                        <div class="col-12 py-2">
+                            <label for="txtAddress" class="col-2 col-form-label" style="padding: 0;">Address</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="Address" placeholder="Address">
+                                <input type="text" class="form-control" id="txtAddress" placeholder="Address">
+                            </div>
+                            <div class="col-sm-10" style="font-size: 10px;color: #ff253a" id="validationTextAddress">
+                                Input Format-"634 kaluthra"
                             </div>
                         </div>
-                        <div class="col-6 py-sm-1">
-                            <label for="Age" class="col-2 col-form-label">Age</label>
+                        <div class="col-8 py-2">
+                            <label for="txtContactNO" class="col-12 col-form-label" style="padding: 0;">Contact-Number</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="Age" placeholder="Age">
+                                <input type="tel" class="form-control" id="txtContactNO" placeholder="Contact-Number">
                             </div>
-                        </div>
-                        <div class="col-8 py-sm-1">
-                            <label for="City" class="col-2 col-form-label">City</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="City" placeholder="City">
+                            <div class="col-sm-10" style="font-size: 10px;color: #ff253a" id="validationTextContactNumber">
+                                Input Format-"071-8898903"
                             </div>
-                        </div>
-                        <div class="col-8 py-sm-1">
-                            <label for="Contact-Number" class="col-12 col-form-label">Contact-Number</label>
-                            <div class="col-sm-10">
-                                <input type="tel" class="form-control" id="Contact-Number" placeholder="Contact-Number">
-                            </div>
+
                         </div>
                     </form>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-success">Save</button>
-                        <button type="button" class="btn btn-outline-warning">Update</button>
-                        <button type="button" class="btn btn-outline-danger">Delete</button>
+                        <button type="button" class="btn btn-outline-success" id="btnSaveUpdateCust">Save OR Update</button>
+                        <button type="button" class="btn btn-outline-danger" id="btnDeleteCust">Delete</button>
                     </div>
                 </div>
             </div>
@@ -156,37 +164,9 @@
                             <th scope="col">ID</th>
                             <th scope="col">Name</th>
                             <th scope="col">Address</th>
-                            <th scope="col">Age</th>
-                            <th scope="col">City</th>
                             <th scope="col">Contact-No</th>
                         </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">01</th>
-                            <td>Dilshan</td>
-                            <td>Pothupitiya</td>
-                            <td>24</td>
-                            <td>Kaluthara</td>
-                            <td>+94728838456</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">02</th>
-                            <td>Dilshan</td>
-                            <td>Pothupitiya</td>
-                            <td>24</td>
-                            <td>Kaluthara</td>
-                            <td>+94728838456</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">03</th>
-                            <td>Dilshan</td>
-                            <td>Pothupitiya</td>
-                            <td>24</td>
-                            <td>Kaluthara</td>
-                            <td>+94728838456</td>
-                        </tr>
-
+                        <tbody id="customerTable">
                         </tbody>
                     </table>
                 </div>
@@ -195,59 +175,70 @@
     </div>
 </section>
 
-<section class="container-fluid mh-100 pb-7 pb-sm-7" id="item">
-    <div class="row p-4">
-        <div class="col col-sm-12 p-sm-2 col-lg-5 p-lg-0 px-lg-2">
+<section class="container-fluid mh-100 " id="item">
+    <div class="row p-2 mt-2">
+        <div class="col col-sm-12 p-sm-2 col-lg-5 p-lg-0 px-lg-2" style="margin-top: 1%;">
             <div class="modal-content w-100 p-1" style="border: 2px solid rgba(0,139,139,0.56); background:rgba(255,255,255,0.87)">
                 <div class="modal-header" style="align-items: center; justify-content: center">
                     <h5 class="modal-title" style="text-decoration: underline; font-family: cursive; font-size: 25px">ITEM</h5>
                 </div>
                 <div class="modal-body">
                     <form class="row">
-                        <div class="col-8 py-sm-1">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search Items" aria-label="Search">
+                        <div class="col-8 ">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search Items" aria-label="Search" id="searchItem">
                         </div>
                         <div class="col-4 py-sm-1">
-                            <button class="btn btn-outline-info " type="submit">Search</button>
+                            <button class="btn btn-outline-info " type="submit" id="btnSearchItem">Search</button>
                         </div>
-                        <div class="col-12 py-sm-1">
-                            <label for="Code" class="col-2 col-form-label">Code</label>
+                        <div class="col-12 ">
+                            <label for="txtCode" class="col-2 col-form-label" id>Code</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="Code" placeholder="Item Code">
+                                <input type="text" class="form-control" id="txtCode" placeholder="Item Code">
+                            </div>
+                            <div class="col-sm-10" style="font-size: 10px;color: #ff253a" id="validationTextCode">
+                                Input Format-"I001"
                             </div>
                         </div>
 
-                        <div class="col-12 py-sm-1">
-                            <label for="Description" class="col-2 col-form-label">Description</label>
+                        <div class="col-12 ">
+                            <label for="txtDescription" class="col-2 col-form-label">Description</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="Description" placeholder="Description">
+                                <input type="text" class="form-control" id="txtDescription" placeholder="Description">
+                            </div>
+                            <div class="col-sm-10" style="font-size: 10px;color: #ff253a" id="validationTextDesc">
+                                Input Format-"Rice/biscut/butter"
                             </div>
                         </div>
-                        <div class="col col-lg-12 col-sm-10 py-sm-1">
-                            <label for="Unit-Price" class="col-12 col-form-label">Unit-Price</label>
+                        <div class="col col-lg-12 col-sm-10 ">
+                            <label for="txtUnitPrice" class="col-12 col-form-label">Unit-Price</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="Unit-Price" placeholder="Unit-Price">
+                                <input type="text" class="form-control" id="txtUnitPrice" placeholder="Unit-Price">
+                            </div>
+                            <div class="col-sm-10" style="font-size: 10px;color: #ff253a" id="validationTextUnitPrice">
+                                Input Format-"100.00"
                             </div>
                         </div>
-                        <div class="col-8 py-sm-1">
-                            <label for="Quantity" class="col-2 col-form-label">Quantity</label>
+                        <div class="col-8 ">
+                            <label for="txtQuantity" class="col-2 col-form-label">Quantity</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="Quantity" placeholder="Quantity">
+                                <input type="text" class="form-control" id="txtQuantity" placeholder="Quantity">
+                            </div>
+                            <div class="col-sm-10" style="font-size: 10px;color: #ff253a" id="validationTextQuantity">
+                                Input Format-"1000"
                             </div>
                         </div>
 
                     </form>
 
                     <div class="modal-footer py-4">
-                        <button type="button" class="btn btn-outline-success">Save</button>
-                        <button type="button" class="btn btn-outline-warning">Update</button>
-                        <button type="button" class="btn btn-outline-danger">Delete</button>
+                        <button type="button" class="btn btn-outline-success" id="btnSaveUpdateItem">Save & Update</button>
+                        <button type="button" class="btn btn-outline-danger" id="btnDeleteItem">Delete</button>
                     </div>
                 </div>
             </div>
 
         </div>
-        <div class="col col col-sm-12 p-sm-2 col-lg-7 p-lg-0 " >
+        <div class="col col col-sm-12 p-sm-2 col-lg-7 p-lg-0 " style="margin-top: 1%" >
             <div class="modal-content w-100 h-100 p-1" style="border: 2px solid rgba(0,139,139,0.56); background:rgba(255,255,255,0.87)">
                 <div class="modal-header" style="align-items: center; justify-content: center">
                     <h5 class="modal-title">Item Details</h5>
@@ -263,28 +254,7 @@
 
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">I001</th>
-                            <td>Cheese</td>
-                            <td>RS.500</td>
-                            <td>100</td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">I002</th>
-                            <td>Cheese</td>
-                            <td>RS.500</td>
-                            <td>100</td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">I003</th>
-                            <td>Cheese</td>
-                            <td>RS.500</td>
-                            <td>100</td>
-
-                        </tr>
+                        <tbody id="itemTable">
 
                         </tbody>
                     </table>
@@ -294,20 +264,20 @@
     </div>
 </section>
 
-<section class="container-fluid pb-7 pb-sm-7" id="order">
+<section class="container-fluid " id="order">
     <div class="row py-1">
         <div class="col-12 col-sm-12 col-lg-12  "style="border-bottom: 2px solid rgba(0,71,86,0.81)">
             <div class="row py-1">
                 <div class="col-lg-10 col-sm-8">
                     <div class="row">
-                        <h5 class="col-3" style="width: max-content">Order-ID :-</h5>
-                        <h5 class="col-2" style="width: max-content">001</h5>
+                        <h5 class="col-3" style="width: max-content;margin-top: 5px;">Order-ID :-</h5>
+                        <input type="text" class="form-control col-2" id="txtOrderID" placeholder="OrderID" style="width: 100px;">
                     </div>
                 </div>
                 <div class="col-lg-2 col-sm-4 text-end">
                     <div class="row">
-                        <h5 class="col-6 col-sm-8" style="width: max-content">23/01/2022</h5>
-                        <h5 class="col-6 col-sm-8" style="width: max-content">21:11</h5>
+                        <label class="col-6 col-sm-8" id="orderDate" style="width: max-content">23/01/2022</label>
+                        <label class="col-6 col-sm-8" style="width: max-content">21:11</label>
                     </div>
                 </div>
 
@@ -315,41 +285,40 @@
 
         </div>
         <div class="col-12 col-sm-12 col-lg-4 py-2 ">
-            <div class="modal-content w-100 p-1" style="border:0; background:rgba(237,242,255,0.90)">
+            <div class="modal-content w-100 p-1" style="border:2px solid black; background:rgba(237,242,255,0.90)">
                 <div class="modal-header py-2" style="align-items: center; justify-content: center">
                     <h5 class="modal-title">Select Customer</h5>
                 </div>
                 <div class="modal-body">
                     <form class="row">
                         <div class="col-5 ">
-                            <label for="CustID" class="col-12 col-form-label">Customer-ID</label>
+                            <label for="txtCustID" class="col-12 col-form-label">Customer-ID</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="CustID" placeholder="Customer-ID">
+                                <input type="text" class="form-control" id="txtCustID" placeholder="Customer-ID">
                             </div>
                         </div>
                         <div class="col-7 ">
-                            <label for="CName" class="col-2 col-form-label">Name</label>
+                            <label for="txtCName" class="col-2 col-form-label">Name</label>
                             <div class="col-sm-12">
-                                <input type="text" class="form-control" id="CName" placeholder="Customer Name">
+                                <input type="text" class="form-control" id="txtCName" placeholder="Customer Name">
                             </div>
                         </div>
 
                         <div class="col-12 ">
-                            <label for="CAddress" class="col-2 col-form-label">Address</label>
+                            <label for="txtCAddress" class="col-2 col-form-label">Address</label>
                             <div class="col-sm-12">
-                                <input type="text" class="form-control" id="CAddress" placeholder="Address">
+                                <input type="text" class="form-control" id="txtCAddress" placeholder="Address">
                             </div>
                         </div>
-                        <div class="col-4 ">
-                            <label for="CAge" class="col-2 col-form-label">Age</label>
+                        <div class="col-6 ">
+                            <label for="txtCContactNO" class="col-12 col-form-label">Contact-Number</label>
                             <div class="col-sm-12">
-                                <input type="text" class="form-control" id="CAge" placeholder="Age">
+                                <input type="tel" class="form-control" id="txtCContactNO" placeholder="Contact-Number">
                             </div>
                         </div>
-                        <div class="col-8 ">
-                            <label for="CContact-NO" class="col-12 col-form-label">Contact-Number</label>
-                            <div class="col-sm-12">
-                                <input type="tel" class="form-control" id="CContact-NO" placeholder="Contact-Number">
+                        <div class="col-6 pb-1">
+                            <div class="col-sm-12 pt-4 px-2 text-end">
+                                <button type="button" class="btn btn-outline-success" id="btnFindCust" style="width: 80%; border-radius: 30px">ADD</button>
                             </div>
                         </div>
                     </form>
@@ -358,7 +327,7 @@
             </div>
         </div>
         <div class="col-12 col-sm-12 col-lg-4 pt-2 ">
-            <div class="modal-content w-100 p-1" style="border:0; background:rgba(253,255,238,0.90)">
+            <div class="modal-content w-100 p-1" style="border:2px solid black; background:rgba(253,255,238,0.90)">
                 <div class="modal-header py-2" style="align-items: center; justify-content: center">
                     <h5 class="modal-title">Select Item</h5>
                 </div>
@@ -397,7 +366,7 @@
                         </div>
                         <div class="col-6 pb-1">
                             <div class="col-sm-12 pt-4 px-2 text-end">
-                                <button type="button" class="btn btn-outline-success" style="width: 80%; border-radius: 30px">ADD</button>
+                                <button type="button" class="btn btn-outline-success" id="btnFindItem" style="width: 80%; border-radius: 30px">ADD</button>
                             </div>
                         </div>
                     </form>
@@ -407,44 +376,25 @@
             </div>
         </div>
         <div class="col-12 col-sm-12 col-lg-4 py-2 ">
-            <div class="modal-content w-100 p-1" style="border: 0; background:rgba(233,255,253,0.90)">
+            <div class="modal-content w-100 p-1" style="border: 1px solid black; background:rgba(233,255,253,0.90)">
                 <div class="modal-body">
                     <form class="row pb-2">
-                        <div class="col-12 ">
-                            <div class="row">
-                                <h5 class="col-6 font-weight-bold" style="width: max-content;font-size: 35px;color: blue">Total RS:</h5>
-                                <h6 class="col-6 font-weight-bold" style="width: max-content;font-size: 35px;color: red">10500</h6>
-                            </div>
-                        </div>
-                        <div class="col-8 ">
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control" placeholder="Discount">
-                            </div>
-                        </div>
                         <div class="col-12 pt-2">
                             <div class="row">
                                 <h5 class="col-6 font-weight-bold" style="width: max-content;font-size: 35px;color: blue">Final-Total RS:</h5>
-                                <h6 class="col-6 font-weight-bold" style="width: max-content;font-size: 35px;color: red">9905</h6>
+                                <h6 class="col-6 font-weight-bold" id="subTotal" style="width: max-content;font-size: 35px;color: red"></h6>
                             </div>
                         </div>
-                        <div class="col-8 ">
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control" placeholder="Cash">
-                            </div>
-                        </div>
-                        <div class="col-4 ">
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control" placeholder="Balance">
-                            </div>
-                        </div>
-
-                        <div class="col-6 ">
+                        <div class="col-12 ">
                             <div class="row">
-                                <div class="col-sm-6 pt-5">
-                                    <button type="button" class="btn btn-outline-danger" style="width: 100px;border-radius: 30px">Delete</button>
+                                <div class="col-sm-4 pt-5">
+                                    <button type="button" class="btn btn-outline-danger" id="btnClear" style="width: 100px;border-radius: 30px">Clear</button>
                                 </div>
-                                <div class="col-sm-6 pt-5">
-                                    <button type="button" class="btn btn-outline-success" style="width: 100px;border-radius: 30px">Print</button>
+                                <div class="col-sm-4 pt-5">
+                                    <button type="button" class="btn btn-outline-success" id="btnAddToTable" style="width: 100px;border-radius: 30px">Add</button>
+                                </div>
+                                <div class="col-sm-4 pt-5">
+                                    <button type="button" class="btn btn-outline-success" id="btnSaveOrder" style="width: 100px;border-radius: 30px">Print</button>
                                 </div>
                             </div>
 
@@ -471,35 +421,7 @@
 
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">01</th>
-                            <td>Dilshan</td>
-                            <td>I001</td>
-                            <td>Samba</td>
-                            <td>150</td>
-                            <td>10</td>
-                            <td>1500</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">01</th>
-                            <td>Dilshan</td>
-                            <td>I001</td>
-                            <td>Samba</td>
-                            <td>150</td>
-                            <td>10</td>
-                            <td>1500</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">01</th>
-                            <td>Dilshan</td>
-                            <td>I001</td>
-                            <td>Samba</td>
-                            <td>150</td>
-                            <td>10</td>
-                            <td>1500</td>
-                        </tr>
-
+                        <tbody id="orderTable">
 
                         </tbody>
                     </table>
@@ -508,24 +430,46 @@
         </div>
     </div>
 </section>
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script src="model/Order.js"></script>
+<script src="model/Customer.js"></script>
+<script src="model/Item.js"></script>
+<script src="controller/CustomerController.js"></script>
+<script src="controller/ItemController.js"></script>
+<script src="controller/OrderController.js"></script>
+<script src="db/Database.js"></script>
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<script src="assets/bootstrap/js/bootstrap.bundle.min.js">
-    document.getElementById("btnCustomer").addEventListener("click",function (){
-        document.getElementById("customer").style.display="block";
-        document.getElementById("item").style.display="none";
-        document.getElementById("order").style.display="none";
-    })
-    document.getElementById("btnItem").addEventListener("click",function (){
-        document.getElementById("item").style.display="block";
-        document.getElementById("customer").style.display="none";
-        document.getElementById("order").style.display="none";
-    })
-    document.getElementById("btnOrder").addEventListener("click",function (){
-        document.getElementById("order").style.display="block";
-        document.getElementById("item").style.display="none";
-        document.getElementById("customer").style.display="none";
-    })
 
+
+<script>
+    $("#customer").css("display","none");
+    $("#item").css("display","none");
+    $("#order").css("display","none");
+
+
+    $("#btnCustomer").click(function (){
+    $("#customer").css("display","block");
+    $("#item").css("display","none");
+    $("#order").css("display","none");
+
+});
+
+    $("#btnItem").click(function (){
+    $("#item").css("display","block");
+    $("#customer").css("display","none");
+    $("#order").css("display","none");
+
+});
+
+    $("#btnOrder").click(function (){
+    $("#order").css("display","block");
+    $("#item").css("display","none");
+    $("#customer").css("display","none");
+
+});
+    $("#btnSaveUpdateCust").prop("disabled",true);
+    $("#btnSaveUpdateItem").prop("disabled",true);
 </script>
 </body>
 </html>
