@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Knight</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-utilities.css">
+    <style>
+        body{
+            background-color: black;
+        }
+        body > main {
+            width: fit-content;
+        }
+
+        body > main > section {
+            display: flex;
+            width: fit-content;
+        }
+
+        body > main > section > div {
+            position: relative;
+            width: 150px;
+            height: 50px;
+            margin: 5px;
+            border-radius: 10%;
+        }
+        hr{
+            background-color: red;
+            height: 100px;
+            border: 3px solid #ffffff;
+        }
+
+    </style>
+</head>
+<body>
+<main>
+    <hr>
+    <section id="main">
+        <div id="1" style="width: 110px;height: 30px; top:10px;"></div>
+        <div id="2" style="width: 130px;height: 40px;top:5px;"></div>
+        <div id="3"></div>
+        <div id="4"></div>
+        <div id="5" style="width: 130px;height: 40px;top:5px;"></div>
+        <div id="6" style="width: 110px;height: 30px;top:10px;"></div>
+    </section>
+    <hr>
+</main>
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+    var colorArray = ["rgb(250,0,0)", "rgba(250,0,0,0.85)", "rgba(250,0,0,0.50)", "rgba(250,0,0,0.30)", "rgba(250,0,0,0.20)", "rgba(250,0,0,0.10)"];
+    var divArray = [$("#1"), $("#2"), $("#3"), $("#4"), $("#5"), $("#6")];
+
+
+    function hide() {
+        for (var i = 0; i < divArray.length; i++) {
+            divArray[i].css("background-color", "black");
+        }
+    }
+    let IntervalX;
+    var i= 0;
+    function animateToRight() {
+        hide();
+        divArray[i].css("background-color", colorArray[0]);
+        if(i==1){
+            divArray[1].css("background-color", colorArray[1]);
+            divArray[0].css("background-color", colorArray[2]);
+        }
+        if(i==2){
+            divArray[2].css("background-color", colorArray[1]);
+            divArray[1].css("background-color", colorArray[2]);
+            divArray[0].css("background-color", colorArray[3]);
+        }
+        if(i==3){
+            divArray[2].css("background-color", colorArray[1]);
+            divArray[1].css("background-color", colorArray[2]);
+            divArray[0].css("background-color", colorArray[3]);
+        }
+        if(i==4){
+            divArray[3].css("background-color", colorArray[1]);
+            divArray[2].css("background-color", colorArray[2]);
+            divArray[1].css("background-color", colorArray[3]);
+            divArray[0].css("background-color", colorArray[4]);
+        }
+        if(i==5){
+            divArray[4].css("background-color", colorArray[1]);
+            divArray[3].css("background-color", colorArray[2]);
+            divArray[2].css("background-color", colorArray[3]);
+            divArray[1].css("background-color", colorArray[4]);
+            divArray[0].css("background-color", colorArray[5]);
+        }
+        i++;
+        if (i == 6) {
+            i=0;
+            clearInterval(intervalF);
+            IntervalX = setInterval(animateToLeft,150);
+        }
+    }
+
+
+    x = 5
+    function animateToLeft() {
+        hide();
+        divArray[x].css("background-color", colorArray[0]);
+        if(x==4){
+            divArray[5].css("background-color", colorArray[1]);
+        }
+        if(x==3){
+            divArray[5].css("background-color", colorArray[2]);
+            divArray[4].css("background-color", colorArray[1]);
+        }
+        if(x==2){
+            divArray[5].css("background-color", colorArray[3]);
+            divArray[4].css("background-color", colorArray[2]);
+            divArray[3].css("background-color", colorArray[1]);
+        }
+        if(x==1){
+            divArray[5].css("background-color", colorArray[4]);
+            divArray[4].css("background-color", colorArray[3]);
+            divArray[3].css("background-color", colorArray[2]);
+            divArray[2].css("background-color", colorArray[1]);
+        }
+        if(x==0){
+            divArray[5].css("background-color", colorArray[5]);
+            divArray[4].css("background-color", colorArray[4]);
+            divArray[3].css("background-color", colorArray[3]);
+            divArray[2].css("background-color", colorArray[2]);
+            divArray[1].css("background-color", colorArray[1]);
+        }
+        x--;
+        if (x == -1) {
+            x=5;
+            clearInterval(IntervalX);
+            start();
+        }
+    }
+    function start() {
+        intervalF = setInterval(animateToRight, 150);
+    }
+    let intervalF = setInterval(animateToRight, 150);
+
+</script>
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
