@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Que..</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-utilities.css">
+    <style>
+        body > main > section {
+            display: flex;
+        }
+
+        div {
+            border: 1px solid black;
+            margin: 30px;
+            width: 150px;
+            height: 75px;
+        }
+        #hr,#hr2{
+            height: 10px;
+            background-color: black;
+        }
+
+
+        body > main {
+            position: relative;
+            top: 100px;
+            width: max-content;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+<main>
+    <div id="1"></div>
+    <hr id="hr">
+    <section id="main">
+        <div id="2"></div>
+        <div id="3"></div>
+        <div id="4"></div>
+        <div id="5"></div>
+        <div id="6"></div>
+        <div id="7"></div>
+
+    </section>
+    <hr id="hr2">
+    <div id="8" style="position: relative;left: 84%;"></div>
+</main>
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+    var divArray = [$("#1"), $("#2"), $("#3"), $("#4"), $("#5"), $("#6"), $("#7"), $("#8")];
+    var colorArray = ["#42f5e9", "#f5427b", "#85fa36", "#cdd1fa", "#1d0338", "#103803", "#c8d124", "#045c4f"]
+
+    function animate() {
+        var one = colorArray[0];
+        var two = colorArray[1];
+        var three = colorArray[2];
+        var four = colorArray[3];
+        var five = colorArray[4];
+        var six = colorArray[5];
+        var seven = colorArray[6];
+        var eight= colorArray[7];
+        colorArray=[eight,one,two,three,four,five,six,seven];
+
+
+        divArray[0].css("background-color",colorArray[0]);
+        divArray[1].css("background-color",colorArray[1]);
+        divArray[2].css("background-color",colorArray[2]);
+        divArray[3].css("background-color",colorArray[3]);
+        divArray[4].css("background-color",colorArray[4]);
+        divArray[5].css("background-color",colorArray[5]);
+        divArray[6].css("background-color",colorArray[6]);
+        divArray[7].css("background-color",colorArray[7]);
+//reverse............................................................
+        /*idArray[0].css("background-color",colorArray[7]);
+        idArray[1].css("background-color",colorArray[6]);
+        idArray[2].css("background-color",colorArray[5]);
+        idArray[3].css("background-color",colorArray[4]);
+        idArray[4].css("background-color",colorArray[3]);
+        idArray[5].css("background-color",colorArray[2]);
+        idArray[6].css("background-color",colorArray[1]);
+        idArray[7].css("background-color",colorArray[0]);*/
+    }
+    setInterval(animate,500);
+
+</script>
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
