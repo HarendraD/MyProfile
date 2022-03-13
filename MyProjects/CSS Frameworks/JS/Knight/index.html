@@ -57,7 +57,7 @@
             divArray[i].css("background-color", "black");
         }
     }
-    let IntervalX;
+    let Interval1;
     var i= 0;
     function animateToRight() {
         hide();
@@ -93,7 +93,7 @@
         if (i == 6) {
             i=0;
             clearInterval(intervalF);
-            IntervalX = setInterval(animateToLeft,150);
+            Interval1 = setInterval(animateToLeft,150);
         }
     }
 
@@ -130,14 +130,14 @@
         x--;
         if (x == -1) {
             x=5;
-            clearInterval(IntervalX);
+            clearInterval(Interval1);
             start();
         }
     }
     function start() {
-        intervalF = setInterval(animateToRight, 150);
+        interval2 = setInterval(animateToRight, 150);
     }
-    let intervalF = setInterval(animateToRight, 150);
+    let interval2 = setInterval(animateToRight, 150);
 
 </script>
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
