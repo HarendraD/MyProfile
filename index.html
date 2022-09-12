@@ -1,1278 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>My Profile</title>
-    <link href="assets/css/normalize.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>
-        header{
-            width: 100vw;
-            position: fixed;
-            height: 49px;
-            background: transparent;
-            z-index: 100;
-            opacity: 100%;
-        }
-        header>ul{
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            margin: 13px;
-            height: 30px;
-            font-size: 22px;
-            font-family: 'Bebas Neue', cursive;
-            list-style: none;
-            color: #011638;
-
-        }
-        header>ul>li>a{
-            text-decoration: none;
-            color: black;
-        }
-        header>ul>li{
-            padding: 0 15px 0 15px;
-            display: inline-block;
-        }
-        header>ul>li>a:hover{
-            cursor: pointer;
-            color: red;
-            text-decoration-line: underline;
-            transform: scale(1.2);
-
-        }
-        header>ul>li>:hover{
-            cursor: pointer;
-            color: red;
-            text-decoration-line: underline;
-            transform: scale(1.2);
-
-        }
-        header>div{
-            width: max-content;
-            height: max-content;
-            position: absolute;
-            top: 40px;
-            bottom: 30px;
-            left: 20px;
-            margin: auto;
-            animation: movedown 1s linear 1 ;
-        }
-        @keyframes movedown {
-            0%{
-                transform: translateY(-100px);
-            }
-            100%{
-                transform: translateY(0);
-            }
-        }
-        header>div>h1{
-            font-family: monospace;
-            font-size: 40px;
-            color: red;
-        }
-        header>div>h1>span{
-            font-family: cursive;
-            color: aqua;
-        }
-
-/*----home---------------------------------------------------*/
-        section{
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            height: 100vh;
-            opacity: 100%;
-            background: #eff4fd;
-            border-bottom: 2px solid #a8c7fecc;
-            border-radius: 10px;
-
-        }
-        .background{
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: 0;
-            opacity: 40%;
-            width: 600px;
-            height: 600px;
-            position: relative;
-            background: url("assets/images/homeback.png");
-        }
-        .main-image>img{
-            position: relative;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            margin: auto;
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-        }
-        .main-image:hover{
-            transform: scale(1.1);
-            cursor: pointer;
-            transition: all 1s;
-        }
-        .main-image{
-            position: absolute;
-            top: 15%;
-            left: 60px;
-            margin: 10px;
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            border: 3px #1240fc;
-            box-shadow: 0 0 40px 10px rgba(77, 115, 255, 0.25);
-            transition: all 1s;
-        }
-        .main-text{
-            position: absolute;
-            width: max-content;
-            height: max-content;
-            top: 0;
-            bottom: 0;
-            padding-right: 150px;
-            right: 0;
-            margin: auto ;
-        }
-        .main-text .hello{
-            position: relative;
-            margin: 0;
-            width: max-content;
-            font-family: 'Bebas Neue', cursive;
-            font-size: 40px;
-        }
-        .name>span{
-            color: red;
-        }
-        .name{
-            font-family: cursive;
-            color: cyan;
-        }
-        .Icon{
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            width: max-content;
-            height: max-content;
-        }
-        .Icon>a>img{
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-        }
-        .Icon>a>img:hover{
-            cursor: pointer;
-            transform: scale(1.2);
-        }
-
-/*----About me---------------------------------------------------*/
-
-        .texts{
-            position: relative;
-            top: 10%;
-            bottom: 5%;
-            left: 5%;
-            width: 90%;
-            height: 85%;
-            box-shadow: 0 0 60px 10px #B4C6FF3F;
-            background-color: #B4C6FF3F;
-            border-radius: 20px;
-            display: flex;
-        }
-        .texts>div:nth-child(1){
-            position: relative;
-            height: 100%;
-            width: 60%;
-        }
-        .texts>div:nth-child(2){
-            position: relative;
-            height: 100%;
-            width: 40%;
-        }
-        .caption{
-            position: relative;
-            left: 60px;
-            top: 60px;
-            text-align: center;
-            width: max-content;
-            font-size: 50px;
-            color: #ff0080;
-            font-family: 'Bebas Neue', cursive;
-        }
-        .caption>span{
-            color: cyan ;
-            font-family: 'Secular One', sans-serif;
-        }
-        .about{
-            position: relative;
-            left: 70px;
-            top: 120px;
-            text-align: left;
-            width: 50%;
-            font-size: 25px;
-
-        }
-        .thanks{
-            position: relative;
-            left: 70px;
-            top: 160px;
-            text-align: left;
-            width: 50%;
-            font-size: 30px;
-            color: black;
-        }
-        .about-image{
-            width: 45%;
-            height: 80%;
-            position: absolute;
-            bottom: 0;
-            right: 100px;
-        }
-
-        .about-image img{
-            height: 100%;
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            transition: bottom 1s, left 1s;
-        }
-
-        .about-image:hover .shape{
-            bottom: 40px;
-        }
-
-        .about-image:hover .girl{
-            left: 45%;
-        }
-/*----journey---------------------------------------------------*/
-        .caption-text{
-            position: absolute;
-            left: 0;
-            top: 10px;
-            right: 0;
-            margin: auto;
-            width: max-content;
-            font-size: 30px;
-            font-family: monospace;
-            text-decoration-line: underline;
-        }
-        .center-image{
-            position: absolute;
-            top: 30px;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: 145px;
-            height: 90vh;
-            background-image: url("assets/images/flowImage.png");
-        }
-
-        .center-image .arrow{
-            position: absolute;
-            top: 80px;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: max-content;
-            height: max-content;
-
-        }
-        .center-image .arrow>span{
-            position: relative;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            margin: auto;
-            display: block;
-            width: 40px;
-            height: 40px;
-            border-bottom: 10px solid #0059ff;
-            border-right: 10px solid #0059ff;
-            box-shadow: 5px 5px 5px 1px #ff0062;
-
-            transform: rotate(45deg);
-            animation: down 2s infinite;
-        }
-        .arrow>span:nth-child(2){
-            animation-delay:-.2s;
-        }
-        .arrow>span:nth-child(3){
-            animation-delay:-.4s;
-        }
-        .arrow>span:nth-child(4){
-            animation-delay:-.6s;
-        }
-        .arrow>span:nth-child(5){
-            animation-delay:-.8s;
-        }
-        .arrow>span:nth-child(6){
-             animation-delay:-.10s;
-         }
-        .arrow>span:nth-child(7){
-              animation-delay:-.12s;
-        }
-        .arrow>span:nth-child(8){
-            animation-delay:-.14s;
-        }
-        .arrow>span:nth-child(9){
-             animation-delay:-.16s;
-         }
-        .arrow>span:nth-child(10){
-              animation-delay:-.18s;
-        }
-        @keyframes down {
-            0%{
-                opacity: 1;
-                transform: rotate(45deg) translate(-40px,-40px);
-            }
-
-            100%{
-                opacity: 0;
-                transform: rotate(45deg) translate(40px,40px);
-            }
-        }
-        .one {
-            position: absolute;
-            top: 10%;
-            left: 15%;
-            margin: auto;
-            width: 400px;
-            height: 200px;
-            display: flex;
-        }
-        .one>div:nth-child(1){
-            position: relative;
-            height: 100%;
-            width: 60%;
-            font-size: 20px;
-
-        }
-        .one>div:nth-child(2){
-            position: relative;
-            height: 100%;
-            width: 40%;
-
-
-        }
-        .one>div:nth-child(2)>img{
-            width: 160px;
-            height: 200px;
-        }
-        .two {
-            position: absolute;
-            top: 25%;
-            right: 15%;
-            margin: auto;
-            width: 400px;
-            height: 200px;
-            display: flex;
-        }
-        .two>div:nth-child(1){
-            position: relative;
-            height: 100%;
-            width: 60%;
-            font-size: 20px;
-
-        }
-        .two>div:nth-child(2){
-            position: relative;
-            height: 100%;
-            width: 40%;
-
-
-        }
-        .two>div:nth-child(2)>img{
-            width: 160px;
-            height: 200px;
-        }
-
-
-        .three {
-            position: absolute;
-            top: 45%;
-            left: 15%;
-            margin: auto;
-            width: 400px;
-            height: 200px;
-            display: flex;
-        }
-        .three>div:nth-child(1){
-            position: relative;
-            height: 100%;
-            width: 60%;
-            font-size: 20px;
-
-        }
-        .three>div:nth-child(2){
-            position: relative;
-            height: 100%;
-            width: 40%;
-
-
-        }
-        .three>div:nth-child(2)>img{
-            width: 160px;
-            height: 200px;
-        }
-
-        .four {
-            position: absolute;
-            top: 60%;
-            right: 15%;
-            margin: auto;
-            width: 400px;
-            height: 200px;
-            display: flex;
-        }
-        .four>div:nth-child(1){
-            position: relative;
-            height: 100%;
-            width: 60%;
-            font-size: 20px;
-
-        }
-        .four>div:nth-child(2){
-            position: relative;
-            height: 100%;
-            width: 40%;
-
-
-        }
-        .four>div:nth-child(2)>img{
-            width: 160px;
-            height: 200px;
-        }
-
-/*----Projects---------------------------------------------------*/
-        .all{
-            top: 40px;
-            position: relative;
-            width: 90%;
-            margin: 0 auto;
-            padding: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .all .image-area{
-            position: relative;
-            border: 5px solid black;
-            border-radius: 4px;
-            transition: all 0.5s ease-in-out;
-        }
-        .all .image-area:hover{
-            border-color: red;
-            transition: all 0.5s ease-in-out;
-            box-shadow: 2px 2px 20px 2px #ff6262;
-
-        }
-        .all .image-area>img{
-            width: 100%;
-        }
-        .all .image-area .hover{
-            cursor: pointer;
-            display: block;
-            position: absolute;
-            background-color: rgba(17, 56, 20, 0.34);
-            height: 100%;
-            text-align: center;
-            width: 100%;
-            font-size: 30px;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.5s ease-in-out;
-        }
-        .all .image-area:hover .hover{
-            cursor: pointer;
-            opacity: 1;
-            visibility: visible;
-            transition: all 0.5s ease-in-out;
-        }
-        .all .image-area:hover .hover .center a{
-            cursor: pointer;
-            bottom: 0;
-            transition: all 0.5s ease-in-out;
-
-        }
-        .all .image-area .hover .center{
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 100%;
-        }
-        .all .image-area .hover .center>div{
-            margin-bottom: 20px;
-            color: white;
-            font-weight: bold;
-        }
-        .all .image-area .hover .center>div>a{
-            text-decoration: none;
-            padding: 10px 20px;
-            color: white;
-            background: #00ec00;
-            border-radius: 20px;
-            position: relative;
-            bottom: -100px;
-            transition: all 0.5s ease-in-out;
-
-        }
-
-        .Button{
-            padding: 10px 10px 0 15px;
-            position: absolute;
-            left: 0;
-            top: 75%;
-            right: 0;
-            margin: auto;
-            font-size: 40px;
-            color: #000000;
-            font-weight: bold;
-            font-family: 'Bebas Neue', cursive;
-            width: 250px;
-            height: 50px;
-            border-radius: 30px;
-            background: #000d1e;
-            text-align: left;
-
-        }
-        .Button a{
-            text-decoration: none;
-            color: white;
-
-        }
-        .Button .arrow-right{
-            position: relative;
-            top: 20%;
-            bottom: 0;
-            left: 20%;
-            margin: auto;
-            width: max-content;
-            height: max-content;
-            transform: rotate(270deg);
-        }
-        .Button .arrow-right>span{
-            position: relative;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 75px;
-            margin: auto;
-            display: block;
-            width: 20px;
-            height: 20px;
-            border-bottom: 5px solid #cdfff0;
-            border-right: 5px solid #cdfff0;
-            transform: rotate(45deg);
-
-            animation: right 2s infinite;
-        }
-        .Button .arrow-right>span:nth-child(2){
-            animation-delay:-.2s;
-        }
-        .Button .arrow-right>span:nth-child(3){
-            animation-delay:-.4s;
-        }
-        .Button .arrow-right>span:nth-child(4){
-            animation-delay:-.6s;
-        }
-        @keyframes right {
-            0%{
-                opacity: 1;
-                transform: rotate(45deg) translate(-20px,-20px);
-            }
-            50%{
-                opacity: 1;
-
-            }
-            100%{
-                opacity: 0;
-                transform: rotate(45deg) translate(20px,20px);
-            }
-        }
-/*----Skills---------------------------------------------------*/
-        .Skills{
-            position: relative;
-            top: 10%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 30%;
-
-        }
-        .Skills>div{
-            position: relative;
-            height: 95%;
-            width: 90%;
-            margin: 50px;
-            border-radius: 50%;
-            box-shadow: 16px 16px 30px -8px #bafafa;
-            overflow: hidden;
-
-        }
-        .Skills>div::before{
-            content: "";
-            background-image: conic-gradient(#00c0d3
-            219deg, #19edd05e
-            216deg);
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            animation: rotate 2s linear infinite;
-        }
-
-        @keyframes rotate {
-            0%{
-                transform: rotate(0deg);
-            }
-            100%{
-                transform: rotate(360deg);
-            }
-
-        }
-
-
-        .Skills>div>img{
-            width: 98%;
-            height: 98%;
-            border-radius: 50%;
-            position: absolute;
-            z-index: 10;
-        }
-        .caption-text-two{
-            position: absolute;
-            left: 0;
-            top: 45%;
-            right: 0;
-            margin: auto;
-            width: max-content;
-            font-size: 30px;
-            font-family: monospace;
-            text-decoration-line: underline;
-        }
-        .Tools{
-            position: relative;
-            top: 30%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 30%;
-
-        }
-        .Tools>div{
-            position: relative;
-            height: 95%;
-            width: 90%;
-            margin: 50px;
-            border-radius: 20%;
-            box-shadow: 16px 16px 30px -8px #bafafa;
-            overflow: hidden;
-        }
-        .Tools>div::before{
-            content: "";
-            background-image: conic-gradient(#00c0d3
-            219deg, #19edd05e
-            216deg);
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            animation: rotate 2s linear infinite;
-        }
-
-        @keyframes rotate {
-            0%{
-                transform: rotate(0deg);
-            }
-            100%{
-                transform: rotate(360deg);
-            }
-
-        }
-        .Tools>div>img{
-            width: 98%;
-            height: 98%;
-            border-radius: 20%;
-            position: absolute;
-            z-index: 10;
-            background-color: white;
-        }
-        .Tools>div:hover{
-            transform: scale(1.2);
-        }
-        .Skills>div:hover{
-            transform: scale(1.2);
-        }
-
-/*----Gallery---------------------------------------------------*/
-        .slide{
-            width: 90%;
-            height: 90%;
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 20%;
-            bottom: 100px;
-            margin: auto;
-            overflow: hidden;
-            border: 5px solid #00fff3;
-        }
-        .slide .Slider{
-            width: 400%;
-            height: 100%;
-            display: flex;
-            animation-name: slideme;
-            animation-duration: 10s;
-            animation-direction: alternate;
-            animation-iteration-count: infinite;
-        }
-
-        .slide .Slider>div{
-            width: 100%;
-        }
-        .slide .Slider>div:nth-child(1){
-            background: url("assets/images/IMG1.jpg.png");
-            background-size: cover;
-            background-position: center;
-        }
-
-        .slide .Slider>div:nth-child(2){
-            background: url("assets/images/IMG2.jpg.png");
-            background-size: cover;
-            background-position: center;
-        }
-
-        .slide .Slider>div:nth-child(3){
-            background: url("assets/images/IMG3.jpg.png");
-            background-size: cover;
-            background-position: center;
-        }
-
-        .slide .Slider>div:nth-child(4){
-            background: url("assets/images/IMG4.jpg.png");
-            background-size: cover;
-            background-position: center;
-        }
-
-
-        @keyframes slideme {
-            0%,15%{
-                transform: translateX(0);
-            }
-            25%,40%{
-                transform: translateX(-25%);
-            }
-            50%,70%{
-                transform: translateX(-50%);
-            }
-
-            80%,100%{
-                transform: translateX(-75%);
-            }
-        }
-
-/*----Contact Me---------------------------------------------------*/
-        .contact-me{
-            height: 80vh;
-        }
-        .contact-me .center{
-            position: relative;
-            width: 90%;
-            height: 80%;
-            top: 20%;
-            left: 5%;
-            display: flex;
-        }
-        .contact-me .center>div:nth-child(1){
-            margin-left: 20px;
-            margin-bottom: 60px;
-            margin-right: 10px;
-            height: 60%;
-            width: 20%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            font-size: 32px;
-            justify-content: space-between;
-
-        }
-        .contact-me .center>div:nth-child(1)>div{
-
-        }
-
-        .contact-me .center>div:nth-child(2){
-            margin-left: 20px;
-            margin-bottom: 20px;
-            margin-right: 10px;
-            height: 95%;
-            width: 80%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: space-between;
-
-        }
-        .contact-me .center>div:nth-child(2)>input{
-            width: 70%;
-            height: 40px;
-            font-size: 20px;
-
-        }
-        .contact-me .center>div:nth-child(2)>textarea{
-            width: 90%;
-            height: 150px;
-            font-size: 15px;
-        }
-        .contact-me .center>div:nth-child(2)>button{
-            width: 150px;
-            height: 50px;
-            font-size: 35px;
-            background: greenyellow;
-            border-radius: 10%;
-            margin-left: 75%;
-        }
-        .contact-me .center>div:nth-child(2)>button:hover{
-            transform: scale(1.2);
-            cursor: pointer;
-        }
-        .contact-me .center>div:nth-child(2)>textarea:hover,
-        .contact-me .center>div:nth-child(2)>input:hover{
-            background-color: rgba(3, 52, 43, 0.49);
-
-        }
-
-/*----footer---------------------------------------------------*/
-        footer{
-            position: relative;
-            width: 100%;
-            height: 150px;
-            background-color: black;
-        }
-        footer>div:nth-child(1) {
-            text-align: center;
-            color: white;
-            font-size: 30px;
-            font-weight: bold;
-
-        }
-        footer>div:nth-child(2){
-            text-align: center;
-            color: white;
-            font-size: 15px;
-            font-weight: bold;
-            text-space: 10px;
-        }
-        footer>div:nth-child(3){
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            top: 60px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            width: max-content;
-            height: max-content;
-        }
-        footer>div>a>img{
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin: 0 20px;
-        }
-        footer>div>a>img:hover{
-            cursor: pointer;
-            transform: scale(1.2);
-        }
-
-        footer>div:nth-child(4){
-            position: relative;
-            top: 40%;
-            text-align: center;
-            color: white;
-            font-size: 30px;
-            font-weight: bold;
-        }
-
-        @media all and (min-width: 768px)and(max-width: 1024px){
-            .background {
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: 0;
-                opacity: 40%;
-                width: 600px;
-                height: 530px;
-                position: relative;
-                background: url(assets/images/homeback.png);
-            }
-            .main-image {
-                top: 20%;
-                left: 10%;
-                margin: 10px;
-                width: 300px;
-                height: 300px;
-
-            }
-            .main-image>img {
-                width: 300px;
-                height: 300px;
-            }
-            .main-text {
-                left: 45%;
-            }
-            .main-text .hello {
-                font-size: 30px;
-
-            }
-            .main-text .name {
-                font-size: 35px;
-
-            }
-            .main-text .info-text{
-                font-size: 15px;
-            }
-            .Icon {
-                bottom: 0;
-                right: 0;
-                margin: auto;
-            }
-            .Icon>a>img {
-                width: 40px;
-                height: 40px;
-            }
-            .caption {
-                font-size: 30px;
-            }
-            .about {
-                left: 60px;
-                font-size: 20px;
-            }
-            .thanks {
-                left: 60px;
-            }
-            .about-image img {
-                height: 90%;
-            }
-            .journey .center-image {
-                opacity: 50%;
-                top: 40px;
-                width: 140px;
-            }
-            .journey .center-image .arrow {
-                top: 40px;
-                margin: 0 auto;
-            }
-            .journey .one {
-                left: 5%;
-                width: 300px;
-                font-size: 15px;
-            }
-            .journey .two{
-                width: 300px;
-                right: 5%;
-                font-size: 15px;
-            }
-            .journey .three{
-                width: 300px;
-                left: 5%;
-                font-size: 15px;
-            }
-            .journey .four{
-                top: 65%;
-                width: 300px;
-                right: 5%;
-                font-size: 15px;
-            }
-            .journey>div .text{
-                font-size: 15px;
-                width: max-content;
-                height: max-content;
-            }
-            .journey>div .image>img{
-                width: 140px;
-                height: 180px;
-            }
-            .journey>div .image{
-                width: max-content;
-                height: max-content;
-            }
-            .projects .all .image-area {
-                width: 250px;
-                height: 250px;
-            }
-            .projects .all .image-area .hover{
-                font-size: 25px;
-            }
-
-
-        }
-
-
-
-
-
-
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--///////////////////////// UNICONS /////////////////////////-->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>My Profile</title>
+    </head>
+    <body>
+        <!--///////////////////////// HEADER /////////////////////////-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Harendra Dilshan</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <i class="uil uil-times nav__close" id="nav-close"></i>
+                    <ul class="nav__list grid">
+                        <li class="nav__item" id="nav-link">
+                            <a href="#home" class="nav__link">
+                                <i class="uil uil-estate nav__icon"></i>Home
+                            </a>
+                        </li>
+                        <li class="nav__item" id="nav-link">
+                            <a href="#about" class="nav__link">
+                                <i class="uil uil-user nav__icon"></i>About
+                            </a>
+                        </li>
+                        <li class="nav__item" id="nav-link">
+                            <a href="#skills" class="nav__link">
+                                <i class="uil uil-brackets-curly nav__icon"></i>Skills
+                            </a>
+                        </li>
+                        <li class="nav__item" id="nav-link">
+                            <a href="#education" class="nav__link">
+                                <i class="uil uil-graduation-cap nav__icon"></i>Education
+                            </a>
+                        </li>
+                        <li class="nav__item" id="nav-link">
+                            <a href="#services" class="nav__link">
+                                <i class="uil uil-bag nav__icon"></i></i>Services
+                            </a>
+                        </li>
+                        <li class="nav__item" id="nav-link">
+                            <a href="#projects" class="nav__link">
+                                <i class="uil uil-folder nav__icon"></i>Projects
+                            </a>
+                        </li>
+                        <li class="nav__item" id="nav-link">
+                            <a href="#contactMe" class="nav__link">
+                                <i class="uil uil-envelope-edit nav__icon"></i>Contact-Me
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                    <div class="nav__btns">
+                        <div class="nav__toggle" id="nav-toggle">
+                            <i class="uil uil-apps"></i>
+                        </div>
+                    </div>
+            </nav>
+
+        </header>
+
+
+        <!--///////////////////////// MAIN /////////////////////////-->
+        <main class="main">
+            <!--///////////////////////// HOME /////////////////////////-->
+            <section class="home section" id="home">
+                <div class="home__container container grid">
+                    <div class="home__content grid">
+                        <div class="home__social">
+                            <a href="https://api.whatsapp.com/send/?phone=%2B94718818902&text&app_absent=0" target="_blank" class="home__social-icon">
+                                <i class="uil uil-whatsapp"></i>
+                            </a>
+                            <a href="https://github.com/HarendraD" target="_blank" class="home__social-icon">
+                                <i class="uil uil-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/harendra-dilshan-360956214" target="_blank" class="home__social-icon">
+                                <i class="uil uil-linkedin"></i>
+                            </a>
+                        </div>
+
+                        <div class="home__img">
+                            <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <mask id="mask0" mask-type="alpha">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
         
+                                    <image class="home__blob-img" x='12' y='18' xlink:href="assets/img/perfil.png"/>
+                                </g>
+                            </svg>
+                        </div>
 
+                        <div class="home__data">
+                            <h1 class="home__title">Hi, I'am Harendra</h1>
+                            <h3 class="home__subtitle">Fullstack Developer</h3>
+                            <p class="home__description">
+                                I have Experience in design and development, prducing quality work
+                            </p>
+                            <a href="#contact" class="button button--flex">
+                                Contact Me<i class="uil uil-message button__icon"></i>
+                            </a>
 
-    </style>
-</head>
-<body>
-
-    <header>
-    <div>
-        <h1>H<span>D</span> </h1>
-    </div>
-    <ul>
-        <li><a href="#section2">About Me</a></li>
-        <li><a href="#section3">My Life Journey</a></li>
-        <li><a href="#section4">Projects</a></li>
-        <li><a href="#section5">Skills</a></li>
-        <li><a href="#section6">Gallery</a></li>
-        <li><a href="#section7">Contact Me</a></li>
-    </ul>
-</header>
-
-    <section class="Home" id="section1">
-        <div class="background"></div>
-        <div class="main-image">
-            <img src="assets/images/ProfilePic.png">
-        </div>
-        <div class="main-text">
-            <div class="hello">HELLO !</div>
-            <h1 class="name"> <span>I'M </span>HARENDRA <span>DILSHAN</span></h1>
-            <h3 class="info-text">This is my official Portfolio to showcase my all works</h3>
-
-        </div>
-        <div class="Icon">
-            <a href="#"><img src="assets/images/facbookIcon.png"></a>
-            <a href="https://join.skype.com/invite/vTSZKqebfMiO"><img src="assets/images/skypeIcon.png"></a>
-            <a href="https://www.linkedin.com/in/harendra-dilshan-360956214"><img src="assets/images/LinkedInIcon.png"></a>
-            <a href="https://twitter.com/HarendraDi"><img src="assets/images/twittwericon.png"></a>
-            <a href="https://api.whatsapp.com/send/?phone=%2B94718818902&text&app_absent=0"><img src="assets/images/WhatsappIcon.png"></a>
-            <a href="https://github.com/HarendraD"><img src="assets/images/github.png"></a>
-        </div>
-
-    </section>
-
-    <section class="about-me" id="section2">
-        <div class="caption-text">About Me</div>
-        <div class="texts">
-            <div class="about-text">
-                <div class="caption">Developer <span>&</span> <span>Designer</span></div>
-                <div class="about">
-                    Currently, I am studying
-                    software engineering at IJSE
-                    institute, and I have knowledge
-                    of web design, graphic designing,
-                    database management and
-                    software design If you would like
-                    to receive a service from me,
-                    please contact me
-                </div>
-                <div class="thanks">Thank You !</div>
-
-
-
-            </div>
-            <div class="about-image">
-                <img src="assets/images/shape.png" class="shape">
-                <img src="assets/images/AboutMeIMG.png" class="girl">
-            </div>
-        </div>
-    </section>
-
-    <section class="journey" id="section3">
-        <div class="caption-text">My Life Journey</div>
-        <div class="center-image">
-            <div class="arrow">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <div class="one">
-            <div class="text">
-                WP/K/Pothupitiya Maha Vidyalaya
-                From 2006 To 2016
-                (Ordinary Level)
-            </div>
-            <div class="image"><img src="assets/images/J-one.png"></div>
-        </div>
-        <div class="two">
-            <div class="text">
-                Wadduwa Central College,Kaluthara,Sri Lanka
-                From 2017 To 2019
-                (Advanced Level)
-                (Technology Stream)
-            </div>
-            <div class="image"><img src="assets/images/J-two.png"></div>
-        </div>
-        <div class="three">
-        <div class="text">
-            Work At Global System Sloution As a Quality Assurance Technician
-            (6 months)
-        </div>
-        <div class="image"><img src="assets/images/J-three.png"></div>
-    </div>
-        <div class="four">
-            <div class="text">
-                Form 2020 to the present,
-                Studying Software engineer at IJSE(Institute of Software Engineering)
-
-            </div>
-        <div class="image"><img src="assets/images/J-four.png"></div>
-    </div>
-    </section>
-
-    <section class="projects" id="section4">
-        <div class="caption-text">Projects</div>
-    <!--- images--->
-        <div class="all">
-            <div class="image-area">
-                <div class="hover">
-                    <div class="center">
-                        <div>Project</div>
-
-                        <div>CityZen Medicare</div>
-
-                        <div><a href="#" class="view">View Details</a></div>
+                        </div>
                     </div>
                 </div>
-                <img src="assets/images/ProjectCityzen.png"></div>
-            <div class="image-area">
-                <div class="hover">
-                    <div class="center">
-                        <div>Project</div>
+            </section>
+         </main>   
+        <script src="assets/jQurey/jquery-3.6.0.min.js"></script>
+        <script>
+            
+            //  <!--///////////////////////// Nav Menu /////////////////////////-->
+            if (window.matchMedia('(max-width: 800px)').matches){
+    
+                $( "#nav-toggle" ).click(function() {
+                    $("#nav-menu").css({'top':'0','transition':'all .5s'});
+                });
 
-                        <div>Super Market</div>
+                $("#nav-close").click(function() {
+                    $("#nav-menu").css({'top':'-100%','transition':'all 3s'});
+                });
+                $(".nav__link").click(function() {
+                    $("#nav-menu").css({'top':'-100%','transition':'all 3s'});
+                });
+            }
 
-                        <div><a href="#" class="view">View Details</a></div>
-                    </div>
-                </div>
-                <img src="assets/images/ProjectSupermarket.png"></div>
-            <div class="image-area">
-                <div class="hover">
-                    <div class="center">
-                        <div>Project</div>
+        </script>
+    
+    </body>
 
-                        <div>Hotel </div>
-                        <div>Blue Ocean </div>
-
-                        <div><a href="#" class="view">View Details</a></div>
-                    </div>
-                </div>
-                <img src="assets/images/ProjectHotel.png"></div>
-        </div>
-    <!--- Button--->
-        <div class="Button"><a href="subpages/projects.html"><div class="View-more">View More</div>
-            <div class="arrow-right">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div></a>
-
-
-        </div>
-
-    </section>
-
-    <section class="skills" id="section5">
-        <div class="caption-text">My Skills</div>
-        <div class="Skills">
-            <div>
-                <img src="assets/images/javaicon.png">
-            </div>
-            <div>
-                <img src="assets/images/Htmlicon.png">
-            </div>
-            <div><img src="assets/images/MySqlicon.png"></div>
-            <div><img src="assets/images/cssicon.jpg"></div>
-            <div><img src="assets/images/javaScriptIconicon.png"></div>
-        </div>
-        <div class="caption-text-two">Tools</div>
-        <div class="Tools">
-            <div>
-                <img src="assets/images/IntellijIcon.png">
-            </div>
-            <div>
-                <img src="assets/images/SceaneBuilderIcon.png">
-            </div>
-            <div><img src="assets/images/XDIcon.png"></div>
-            <div><img src="assets/images/PSIcon.png"></div>
-            <div><img src="assets/images/VSCodeIcon.png"></div>
-        </div>
-    </section>
-
-    <section class="Gallery" id="section6">
-        <div class="caption-text">Gallery</div>
-        <div class="slide">
-            <div class="Slider">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="contact-me" id="section7">
-        <div class="caption-text">Contact Me</div>
-        <div class="center">
-            <div class="contact-text">
-                <div>Your Name</div>
-                <div>Your Email</div>
-                <div>Contact No</div>
-                <div>Massage</div>
-            </div>
-            <div class="contact-textfeild">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <textarea></textarea>
-                <button>Send</button>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div>Harendra Dilshan</div>
-        <div>+94718818902,+94763895857</div>
-        <div>
-            <a href="#"><img src="assets/images/facbookIcon.png"></a>
-            <a href="#"><img src="assets/images/skypeIcon.png"></a>
-            <a href="#"><img src="assets/images/LinkedInIcon.png"></a>
-            <a href="#"><img src="assets/images/twittwericon.png"></a>
-            <a href="#"><img src="assets/images/WhatsappIcon.png"></a>
-        </div>
-        <div>Thank You For Visit My Portfolio</div>
-
-
-    </footer>
-
-
-</body>
 </html>
