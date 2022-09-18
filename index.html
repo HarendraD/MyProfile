@@ -8,7 +8,13 @@
     <!--///////////////////////// UNICONS /////////////////////////-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
+    <link href="assets/css/fontawesome-free-6.2.0-web/css/all.css" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
+
 
     <title>My Profile</title>
 </head>
@@ -17,7 +23,9 @@
     <!--///////////////////////// HEADER /////////////////////////-->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">Harendra Dilshan</a>
+            <a href="#" class="nav__logo">
+                Harendra Dilshan
+            </a>
 
             <div class="nav__menu" id="nav-menu">
                 <i class="uil uil-times nav__close" id="nav-close"></i>
@@ -59,7 +67,11 @@
                     </li>
                 </ul>
             </div>
-            <div class="nav__btns">
+            <div class="nav__buttons">
+                <!--//// Dark Theme Button //////-->
+                <i class="uil uil-moon theme__change" id="btnDark"></i>
+                <i class="uil uil-brightness theme__change" id="btnLight"></i>
+
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="uil uil-apps"></i>
                 </div>
@@ -89,38 +101,25 @@
                         </a>
                     </div>
 
-                    <div class="home__img">
-                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <mask id="mask0" mask-type="alpha">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                            </mask>
-                            <g mask="url(#mask0)">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-
-                                <image class="home__blob-img" x='12' y='18' xlink:href="assets/img/perfil.png" />
-                            </g>
-                        </svg>
+                    <div class="home__image-container">
+                        <img src="./assets/img/homeImg.png" alt="" class="home__img">
+                        
                     </div>
 
                     <div class="home__data">
-                        <h1 class="home__title">Hi, I'am 
+                        <h1 class="home__title">Hi, I'am
                             <div class="text__area">
-                                <span>H</span> <span>a</span> <span>r</span> <span>e</span> <span>n</span> <span>d</span> <span>r</span> <span>a</span> <span> </span>
-                                <span>D</span> <span>i</span> <span>l</span> <span>s</span> <span>h</span> <span>a</span> <span>n</span>
+                                <span>H</span> <span>a</span> <span>r</span> <span>e</span> <span>n</span>
+                                <span>d</span> <span>r</span> <span>a</span> <span> </span>
+                                <span>D</span> <span>i</span> <span>l</span> <span>s</span> <span>h</span>
+                                <span>a</span> <span>n</span>
                             </div>
                         </h1>
-                        <h3 class="home__subtitle">Fullstack Developer</h3>
+                        <h3 class="home__subtitle">Fullstack Developer and Designer</h3>
                         <p class="home__description">
                             I have Experience in design and development, prducing quality work
                         </p>
-                        <a href="#contact" class="button button--flex">
+                        <a href="#contact" class="button button--flex home__button">
                             Contact Me<i class="uil uil-message button__icon"></i>
                         </a>
 
@@ -135,8 +134,10 @@
             <span class="section__subtitle">Hello There</span>
 
             <div class="about__container container grid">
-                <img src="assets/img/about.jpg" alt="" class="about__img">
-
+                <div class="about__image">
+                    <img src="assets/img/about.jpg" alt="" class="about__img">
+                </div>
+                
                 <div class="about__detail">
                     <p class="about__description">
                         Currently, I am studying software engineering at IJSE institute,
@@ -178,7 +179,6 @@
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">HTML</h3>
-                                    <span class="skills__number">90%</span>
                                 </div>
                                 <div class="skills__bar">
                                     <span class="skills__precentage skills__html"></span>
@@ -188,7 +188,6 @@
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">JavaFX</h3>
-                                    <span class="skills__number">50%</span>
                                 </div>
                                 <div class="skills__bar">
                                     <span class="skills__precentage skills__javaFx"></span>
@@ -198,7 +197,6 @@
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">CSS</h3>
-                                    <span class="skills__number">60%</span>
                                 </div>
                                 <div class="skills__bar">
                                     <span class="skills__precentage skills__css"></span>
@@ -208,7 +206,6 @@
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">JavaScript</h3>
-                                    <span class="skills__number">50%</span>
                                 </div>
                                 <div class="skills__bar">
                                     <span class="skills__precentage skills__javaScript"></span>
@@ -219,7 +216,6 @@
                                 <div class="skills__titles">
 
                                     <h3 class="skills__name">React</h3>
-                                    <span class="skills__number">40%</span>
                                 </div>
                                 <div class="skills__bar">
                                     <span class="skills__precentage skills__react"></span>
@@ -245,7 +241,6 @@
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">JAVA</h3>
-                                    <span class="skills__number">50%</span>
                                 </div>
                                 <div class="skills__bar">
                                     <span class="skills__precentage skills__java"></span>
@@ -255,7 +250,6 @@
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">MySQL</h3>
-                                    <span class="skills__number">60%</span>
                                 </div>
                                 <div class="skills__bar">
                                     <span class="skills__precentage skills__mysql"></span>
@@ -265,7 +259,6 @@
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">Spring</h3>
-                                    <span class="skills__number">30%</span>
                                 </div>
                                 <div class="skills__bar">
                                     <span class="skills__precentage skills__spring"></span>
@@ -275,7 +268,6 @@
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">ExpressJS</h3>
-                                    <span class="skills__number">40%</span>
                                 </div>
                                 <div class="skills__bar">
                                     <span class="skills__precentage skills__expressJS"></span>
@@ -301,7 +293,6 @@
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">Adobe XD</h3>
-                                    <span class="skills__number">50%</span>
                                 </div>
                                 <div class="skills__bar">
                                     <span class="skills__precentage skills__adobeXD"></span>
@@ -311,7 +302,6 @@
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">Figma</h3>
-                                    <span class="skills__number">80%</span>
                                 </div>
                                 <div class="skills__bar">
                                     <span class="skills__precentage skills__figma"></span>
@@ -321,7 +311,6 @@
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">Photoshop</h3>
-                                    <span class="skills__number">60%</span>
                                 </div>
                                 <div class="skills__bar">
                                     <span class="skills__precentage skills__photoshop"></span>
@@ -342,7 +331,6 @@
                                     Experience in using thease application
                                 </span>
                             </div>
-
                             <i class="uil uil-angle-down skills__arrow" id="toolArrow"></i>
                         </div>
 
@@ -383,15 +371,16 @@
         <section class="education section" id="education">
             <h2 class="section__title">Education</h2>
             <span class="section__subtitle">My Educational history</span>
-            
+
             <div class="education__container container">
                 <div class="education__section">
                     <div class="eductation__content">
                         <!--//////////////////////// EDUCATION 1 ////////////////////////////////-->
                         <div class="education__data">
-                            <div>
+                            <div class="education__info one">
                                 <h3 class="eduction__title">First School</h3>
-                                <span class="education__subtitle">WP/K/Pothupitiya Maha Vidyalaya (Ordinary Level)</span>
+                                <span class="education__subtitle">WP/K/Pothupitiya Maha Vidyalaya (Ordinary
+                                    Level)</span>
                                 <div class="education__date">
                                     2006 To 2016
                                 </div>
@@ -412,7 +401,7 @@
                                 <span class="education__line"></span>
                             </div>
 
-                            <div>
+                            <div class="education__info two">
                                 <h3 class="eduction__title">Second School</h3>
                                 <span class="education__subtitle">WP/K/Wadduwa Central College (Advanced Level)</span>
                                 <div class="education__date">
@@ -420,13 +409,13 @@
                                 </div>
                             </div>
 
-                            
+
                         </div>
 
                         <!--//////////////////////// EDUCATION 3 ////////////////////////////////-->
                         <div class="education__data">
 
-                            <div>
+                            <div class="education__info three">
                                 <h3 class="eduction__title">GDSE</h3>
                                 <span class="education__subtitle">IJSE(Institute of Software Engineering)</span>
                                 <div class="education__date">
@@ -436,12 +425,92 @@
 
                             <div>
                                 <span class="education__rounder"></span>
-                                
+                                <span class="education__line"></span>
                             </div>
-                            
+
                         </div>
-                        
-                    </div>                       
+
+                        <!--//////////////////////// EDUCATION 4 ////////////////////////////////-->
+                        <div class="education__data">
+                            <div></div>
+
+                            <div>
+                                <span class="education__rounder"></span>
+                            </div>
+
+                            <div class="education__info four">
+                                <h3 class="eduction__title">BSc (hons) in Computing</h3>
+                                <span class="education__subtitle">University of Bolton(UK)(pending)</span>
+                                <div class="education__date">
+                                    Sheduled to be finished on 2024
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--///////////////////////// SERVICES /////////////////////////-->
+        <section class="services section" id="services">
+            <h2 class="section__title">Services</h2>
+            <span class="section__subtitle">What can I offer</span>
+
+            <div class="services__container container">
+                <div class="services__cards">
+                    <!--///////////////////////// SERVICE 1 /////////////////////////-->
+                    <div class="services__content">
+                        <div class="services__front ">
+
+                            <i class="uil uil-desktop-alt service__icon"></i>
+                            <h2 class="services__title">Desktop <br /> Application</h2>
+                        </div>
+                        <div class="services__back">
+                            <p class="services__description">I will develop  full stack Desktop applications As A Solution To Your              
+                                        Problems using "Java" , "JavaFX" , "MySQL" and "CSS" etc.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--///////////////////////// SERVICE 2 /////////////////////////-->
+                    <div class="services__content">
+                        <div class="services__front ">
+                            <i class="uil uil-mobile-android service__icon"></i>
+                            <h2 class="services__title">Mobile <br /> Application</h2>
+                        </div>
+                        <div class="services__back">
+                            <p class="services__description">I Can Create any mobile app as per your requirement <br />
+                                I use REACT-NATIVE for build mobile apps</p>
+                        </div>
+                    </div>
+
+                    <!--///////////////////////// SERVICE 3 /////////////////////////-->
+                    <div class="services__content">
+                        <div class="services__front ">
+                            <i class="uil uil-browser service__icon"></i>
+                            <h2 class="services__title">Web <br /> Application</h2>
+                        </div>
+                        <div class="services__back">
+                            <p class="services__description">I will develop custom web applications for you.
+                                <br /> I use HTML5,CSS,React,Boostrap and JavaScript to create web application
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--///////////////////////// SERVICE 4 /////////////////////////-->
+                    <div class="services__content">
+                        <div class="services__front">
+                            <i class="uil uil-palette service__icon"></i>
+                            <h2 class="services__title">Grapich <br /> Design</h2>
+                        </div>
+                        <div class="services__back">
+                            <p class="services__description">I will do any graphic design work for you <br/>
+                                Graphics for website , social media , Print Design, etc</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -453,13 +522,14 @@
 
             <div class="projects__container container">
                 <div class="projects__cards">
-            <!--///////////////////////// PROJECT 1 /////////////////////////-->
+                    <!--///////////////////////// PROJECT 1 /////////////////////////-->
                     <div class="projects__content">
-                        <img src="assets/img/portfolio1.jpg" alt="" class="projects__img">
+                        <img src="assets/img/Project1.jpg" alt="" class="projects__img">
 
                         <div class="projects__data">
                             <h3 class="projects__title">Car_Rental_System</h3>
-                            <p class="projects__description">This ia a web application that able to manage all car reservations.
+                            <p class="projects__description">This ia a web application that able to manage all car
+                                reservations.
                                 Implement by using Java , Spring, MySQL, HTML , CSS and JavaScript.</p>
                             <a href="#" class="button button--flex button--small projects__button">
                                 View Info
@@ -470,11 +540,12 @@
 
                     <!--///////////////////////// PROJECT 2 /////////////////////////-->
                     <div class="projects__content">
-                        <img src="assets/img/portfolio2.jpg" alt="" class="projects__img">
+                        <img src="assets/img/Project2.jpg" alt="" class="projects__img">
 
                         <div class="projects__data">
                             <h3 class="projects__title">Real Time Chat App</h3>
-                            <p class="projects__description">This ia a application that you can chat everyone using this app.
+                            <p class="projects__description">This ia a application that you can chat everyone using this
+                                app.
                                 Implement by using Java, Socket and JavaFX.</p>
                             <a href="#" class="button button--flex button--small projects__button">
                                 View Info
@@ -485,32 +556,112 @@
 
                     <!--///////////////////////// PROJECT 3 /////////////////////////-->
                     <div class="projects__content">
-                        <img src="assets/img/portfolio3.jpg" alt="" class="projects__img">
+                        <img src="assets/img/Project3.jpg" alt="" class="projects__img">
 
                         <div class="projects__data">
                             <h3 class="projects__title">Medical Center Managment System</h3>
-                            <p class="projects__description">This application that help to manage all work in your medical center.
+                            <p class="projects__description">This application that help to manage all work in your
+                                medical center.
                                 Implement by using Java , JavaFX and MySQL.</p>
                             <a href="#" class="button button--flex button--small projects__button">
                                 View Info
                                 <i class="uil uil-angle-double-right button__icon"></i>
                             </a>
                         </div>
-                    </div> 
+                    </div>
                 </div>
-                    <a href="#" class="button button--flex button--small projects__button">
-                        View More
-                        <i class="uil uil-angle-double-right button__icon"></i>
-                    </a>
+                <a href="#" class="button button--flex button--small projects__button">
+                    View More
+                    <i class="uil uil-angle-double-right button__icon"></i>
+                </a>
             </div>
         </section>
 
+
+        <!--///////////////////////// CONTACT ME /////////////////////////-->
+        <section class="contact section" id="contactMe">
+            <h2 class="section__title">Contact Me</h2>
+
+            <div class="contact__container container">
+                <div class="contact__details">
+                    <div class="contact__info">
+                        <i class="uil uil-phone-volume contact__icon"></i>
+
+                        <div>
+
+                            <h4 class="contact__data"><a href="tel.+94763895857"
+                                    class="href contact__data">+94-763895857</a></h4>
+                        </div>
+                    </div>
+
+                    <div class="contact__info">
+                        <i class="uil uil-map-marker-alt contact__icon"></i>
+                        <div>
+                            <h4 class="contact__data">634/B, Korosdhuwa, Wadduwa, <br /> Kaluthara, <br /> Sri Lanka</h4>
+                        </div>
+                    </div>
+
+                    <div class="contact__info">
+                        <i class="uil uil-at contact__icon"></i>
+
+                        <div>
+                            <h4 class="contact__data"><a href="mailto:harendradilshan57@gmail.com"
+                                    class="href contact__data">harendradilshan57@gmail.com</a></h4>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="" class="contact__form">
+                    <div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Name</label>
+                            <input type="text" class="contact__input">
+                        </div>
+
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Email</label>
+                            <input type="email" class="contact__input">
+                        </div>
+
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Message</label>
+                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                        </div>
+
+                        <a href="#" class="button button--flex">
+                            Send
+                            <i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
     </main>
+
+    <!--///////////////////////// FOOTER /////////////////////////-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div>
+                <h1 class="footer__title section__title">Harendra Dilshan</h1>
+                <div class="footer__text">
+                    <h4>Developed by Harendra Dilshan © 2022</h4>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
+    <!--///////////////////////// JQUERY /////////////////////////-->
     <script src="assets/jQurey/jquery-3.6.0.min.js"></script>
     <script>
 
         //  <!--///////////////////////// Nav Menu /////////////////////////-->
-        if (window.matchMedia('(max-width: 800px)').matches) {
+        
+        $("#btnLight").css({ 'display': 'none' });
+        
+        
+        if (window.matchMedia('(max-width: 820px)').matches) {
 
             $("#nav-toggle").click(function () {
                 $("#nav-menu").css({ 'top': '0', 'transition': 'all .5s' });
@@ -525,56 +676,71 @@
         }
 
         //  <!--///////////////////////// Skills Animation /////////////////////////-->
-            
-        $("#frontEnd").css({'display':'none'});
-            $("#backEnd").css({'display':'none'});
-            $("#design").css({'display':'none'});
-            $("#tools").css({'display':'none'});
 
-            $("#btnFrontEnd").click(function (){
-                $("#frontArrow").css({'transform':'rotate(-180deg)'});
-                $("#backArrow").css({'transform':'rotate(0deg)'});
-                $("#designArrow").css({'transform':'rotate(0deg)'});
-                $("#toolArrow").css({'transform':'rotate(0deg)'});
+        
+        $("#frontEnd").css({ 'display': 'none' });
+        $("#backEnd").css({ 'display': 'none' });
+        $("#design").css({ 'display': 'none' });
+        $("#tools").css({ 'display': 'none' });
 
-                $("#frontEnd").show(300);
-                $("#backEnd").hide(300);
-                $("#design").hide(300);
-                $("#tools").hide(300);
-            });
-            $("#btnBackEnd").click(function (){
-                $("#backArrow").css({'transform':'rotate(-180deg)'});
-                $("#forntArrow").css({'transform':'rotate(0deg)'});
-                $("#designArrow").css({'transform':'rotate(0deg)'});
-                $("#toolArrow").css({'transform':'rotate(0deg)'});
-                
-                $("#frontEnd").hide(300);
-                $("#backEnd").show(300);
-                $("#design").hide(300);
-                $("#tools").hide(300);
-            });
-            $("#btnDesign").click(function (){
-                $("#designArrow").css({'transform':'rotate(-180deg)'});
-                $("#backArrow").css({'transform':'rotate(0deg)'});
-                $("#forntArrow").css({'transform':'rotate(0deg)'});
-                $("#toolArrow").css({'transform':'rotate(0deg)'});
+        $("#btnFrontEnd").click(function () {
+            $("#frontArrow").css({ 'transform': 'rotate(-180deg)' });
+            $("#backArrow").css({ 'transform': 'rotate(0deg)' });
+            $("#designArrow").css({ 'transform': 'rotate(0deg)' });
+            $("#toolArrow").css({ 'transform': 'rotate(0deg)' });
 
-                $("#frontEnd").hide(300);
-                $("#backEnd").hide(300);
-                $("#design").show(300);
-                $("#tools").hide(300);
-            });
-            $("#btnTools").click(function (){
-                $("#designArrow").css({'transform':'rotate(0deg)'});
-                $("#backArrow").css({'transform':'rotate(0deg)'});
-                $("#forntArrow").css({'transform':'rotate(0deg)'});
-                $("#toolArrow").css({'transform':'rotate(-180deg)'});
+            $("#frontEnd").show(300);
+            $("#backEnd").hide(300);
+            $("#design").hide(300);
+            $("#tools").hide(300);
+        });
+        $("#btnBackEnd").click(function () {
+            $("#backArrow").css({ 'transform': 'rotate(-180deg)' });
+            $("#forntArrow").css({ 'transform': 'rotate(0deg)' });
+            $("#designArrow").css({ 'transform': 'rotate(0deg)' });
+            $("#toolArrow").css({ 'transform': 'rotate(0deg)' });
 
-                $("#frontEnd").hide(300);
-                $("#backEnd").hide(300);
-                $("#design").hide(300);
-                $("#tools").show(300);
-            });
+            $("#frontEnd").hide(300);
+            $("#backEnd").show(300);
+            $("#design").hide(300);
+            $("#tools").hide(300);
+        });
+        $("#btnDesign").click(function () {
+            $("#designArrow").css({ 'transform': 'rotate(-180deg)' });
+            $("#backArrow").css({ 'transform': 'rotate(0deg)' });
+            $("#forntArrow").css({ 'transform': 'rotate(0deg)' });
+            $("#toolArrow").css({ 'transform': 'rotate(0deg)' });
+
+            $("#frontEnd").hide(300);
+            $("#backEnd").hide(300);
+            $("#design").show(300);
+            $("#tools").hide(300);
+        });
+        $("#btnTools").click(function () {
+            $("#designArrow").css({ 'transform': 'rotate(0deg)' });
+            $("#backArrow").css({ 'transform': 'rotate(0deg)' });
+            $("#forntArrow").css({ 'transform': 'rotate(0deg)' });
+            $("#toolArrow").css({ 'transform': 'rotate(-180deg)' });
+
+            $("#frontEnd").hide(300);
+            $("#backEnd").hide(300);
+            $("#design").hide(300);
+            $("#tools").show(300);
+        });
+
+        //  <!--///////////////////////// DARK THEME /////////////////////////-->
+
+        $("#btnDark").click(function(){
+            $(document.body).addClass("dark-theme");
+            $("#btnDark").css({'display':'none'});
+            $("#btnLight").css({ 'display': 'block'});
+        });
+
+        $("#btnLight").click(function(){
+            $(document.body).removeClass("dark-theme");
+            $("#btnDark").css({'display':'block'});
+            $("#btnLight").css({ 'display': 'none'});
+        });
 
     </script>
 
